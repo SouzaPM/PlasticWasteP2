@@ -4,7 +4,7 @@ format:
     theme: cosmo
     orientation: rows
     scrolling: true
-    logo: plastic-waste-icon-vector
+    logo: logo/plastic-waste-icon-vector.jpg
     nav-buttons:
       - icon: envelope
         href: mailto:mpsouza@calpoly.edu 
