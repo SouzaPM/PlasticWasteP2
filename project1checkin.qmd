@@ -1,7 +1,7 @@
 ---
 format:
   dashboard:
-    theme: cosmo
+    theme: minty
     orientation: rows
     scrolling: true
     logo: logo/plastic-waste-icon-vector.jpg
@@ -507,7 +507,7 @@ ranked_table |>
 
 ## Analysis
 
-CO₂ and GDP rank appear to move together — countries with the highest GDP per capita tend to also rank highly in CO₂ emissions. This aligns with the positive relationship found in the regression model.
+CO₂ and GDP rank appear to move together; countries with the highest GDP per capita tend to also rank highly in CO₂ emissions. This aligns with the positive relationship found in the regression model.
 
 ## 🫧 Bubble Plot: GDP vs CO₂ Emissions Per Capita
 
@@ -547,8 +547,8 @@ model_data %>%
   theme_ft_rc() +
   labs(
     x = "GDP Per Capita",
-    y = "CO₂ Emissions Per Capita",
-    title = "Bubble Plot of GDP and CO₂ Emissions Per Capita",
+    y = "CO2 Emissions Per Capita",
+    title = "Bubble Plot of GDP and CO2 Emissions Per Capita",
     subtitle = "Countries in 2019, with bubble size representing population"
   )
 ```
