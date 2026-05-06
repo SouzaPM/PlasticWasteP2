@@ -12,7 +12,7 @@ format:
         href: https://www.linkedin.com/in/mason-souza-19082a293/
 ---
 
-# Overview
+# Research Question 2
 
 ```{r}
 #| include: false
@@ -92,6 +92,31 @@ meta_set <- plastics %>%
     gdp_per_capita = gdp_billions * 1e9 / population,
     plastic_waste_per_capita = grand_total / population
   )
+
+meta_set <- meta_set %>%
+  mutate(
+    parent_company = ifelse(
+      parent_company %in% c("NULL", "null"),
+      "Grand Total",
+      parent_company
+    )
+  )
+
+model_data <- meta_set %>%
+  filter(
+    year == 2019,
+    parent_company == "Grand Total"
+  ) %>%
+  mutate(
+    gdp_per_capita = gdp_billions * 1e9 / population,
+    plastic_waste_per_capita = grand_total / population
+  ) %>%
+  filter(
+    !is.na(gdp_per_capita),
+    !is.na(plastic_waste_per_capita),
+    gdp_per_capita > 0,
+    plastic_waste_per_capita > 0
+  )
 ```
 
 ## Data Sources
@@ -125,245 +150,7 @@ What is the relationship between GDP per capita and plastic waste generation acr
 What is the relationship between GDP per capita and CO₂ emissions per capita across countries in 2019? How does population size influence this relationship?
 :::
 
-# Research Question 1
 
-## Data Summaries {.tabset}
-
-### 📊 Total Waste by Country
-
-How much plastic waste was collected in each country from 2019–2020?
-
-```{r}
-country_waste_summary <- function(plastics) {
-  plastics |>
-    mutate(country = str_to_lower(country)) |>
-    filter(parent_company == "Grand Total") |>
-    group_by(country) |>
-    summarise(
-      total_waste = sum(grand_total, na.rm = TRUE),
-      .groups = "drop"
-    ) |>
-    arrange(desc(total_waste))
-}
-
-country_waste <- country_waste_summary(plastics)
-
-country_waste |>
-  slice_head(n = 10) |>
-  gt() |>
-  cols_label(
-    country = "Country",
-    total_waste = "Total Plastic Waste"
-  ) |>
-  fmt_number(
-    columns = total_waste,
-    decimals = 0
-  ) |>
-  tab_caption(
-    "Table: Waste by Country (2019-2020)"
-  ) |>
-  tab_header(
-    title = md("**Total Plastic Waste Collected by Country**"),
-    subtitle = "Total across 2019–2020 cleanup events"
-  ) |>
-  tab_style(
-    style = cell_text(weight = "bold"),
-    locations = cells_column_labels()
-  )
-```
-
-### 🙋 Waste per Volunteer
-
-How much plastic waste was collected in each country per volunteer?
-
-```{r}
-countries <- plastics |>
-  filter(parent_company == "Grand Total",
-         !is.na(country)) |>
-  distinct(country) |>
-  pull(country)
-
-waste_per_volunteer_country <- map_dfr(countries, function(c) {
-  plastics |>
-    filter(parent_company == "Grand Total",
-           country == c) |>
-    mutate(c = str_to_lower(c)) |>
-    summarise(
-      country = c,
-      total_waste = sum(grand_total, na.rm = TRUE),
-      total_volunteers = sum(volunteers, na.rm = TRUE),
-      waste_per_volunteer = total_waste / total_volunteers
-    )
-}) |>
-  arrange(desc(waste_per_volunteer))
-
-waste_per_volunteer_country |>
-  slice_head(n = 10) |>
-  gt() |>
-  cols_label(
-    country = "Country",
-    total_waste = "Total Waste",
-    total_volunteers = "Total Volunteers",
-    waste_per_volunteer = "Waste per Volunteer"
-  ) |>
-  fmt_number(
-    columns = c(total_waste, total_volunteers, waste_per_volunteer),
-    decimals = 0,
-    use_seps = TRUE
-  ) |>
-  tab_header(
-    title = md("**Plastic Waste per Volunteer Participation by Country**"),
-    subtitle = "Computed using grand total across countries"
-  ) |>
-  tab_caption(
-    "Table: Waste per volunteer participation across countries, constructed using iteration."
-  ) |>
-  tab_style(
-    style = cell_text(weight = "bold"),
-    locations = cells_column_labels()
-  )
-```
-
-## Plot
-
-```{r}
-#| label: Comparison of GDP per capita and plastic waste per capita (2019)
-graph1 <- meta_set %>%
-  filter(year == 2019, parent_company == "Grand Total")
-
-graph1 <- graph1 %>%
-  mutate(
-    gdp_per_capita = gdp_billions * 1,000,000,000 / population,
-    plastic_waste_per_capita = grand_total / population
-  )
-
-ggplot(graph1, aes(x = gdp_per_capita, y = plastic_waste_per_capita)) +
-  geom_point() +
-  geom_smooth(method = "lm", se = FALSE) +
-  labs(
-    title = "GDP per Capita vs Plastic Waste per Capita (2019)",
-    x = "GDP per capita",
-    y = "Plastic items per capita"
-  ) +
-  scale_x_log10() +
-  scale_y_log10() +
-    theme_ft_rc()
-```
-
-## Statistical Modeling
-
-```{r}
-#| label: Statistical Model
-
-model_data <- meta_set %>%
-  filter(
-    year == 2019,
-    parent_company == "Grand Total"
-  ) %>%
-  mutate(
-    gdp_per_capita = gdp_billions * 1e9 / population,
-    plastic_waste_per_capita = grand_total / population
-  ) %>%
-  filter(
-    !is.na(gdp_per_capita),
-    !is.na(plastic_waste_per_capita),
-    gdp_per_capita > 0,
-    plastic_waste_per_capita > 0
-  )
-
-model <- lm(
-  log10(plastic_waste_per_capita) ~ log10(gdp_per_capita),
-  data = model_data
-)
-
-model_table <- summary(model)$coefficients %>%
-  as.data.frame() %>%
-  tibble::rownames_to_column("term") %>%
-  mutate(
-    term = recode(
-      term,
-      `(Intercept)` = "Intercept",
-      `log10(gdp_per_capita)` = "GDP Per Capita",
-    )
-  )
-
-model_table %>%
-  gt() %>%
-  cols_label(
-    term = "Variable",
-    Estimate = "Estimate",
-    `Std. Error` = "Std. Error",
-    `t value` = "t-value",
-    `Pr(>|t|)` = "p-value"
-  ) %>%
-  fmt_number(
-    columns = c(Estimate, `Std. Error`, `t value`, `Pr(>|t|)`),
-    decimals = 4
-  ) %>%
-  tab_style(
-    style = cell_text(weight = "bold"),
-    locations = cells_column_labels()
-  ) %>%
-  tab_header(
-    title = md("**Regression Results: GDP, Year, and Plastic Waste**"),
-    subtitle = md("Log-log linear model using 2019 country-level data")
-  ) %>%
-  tab_caption(
-    md("Table 1: Linear regression examining how GDP per capita and year relate to plastic waste per capita.")
-  )
-```
-## Analysis
-The regression shows a positive relationship between GDP per capita and plastic waste per capita. This is suggested by the negative coefficient and implies that an increase in GDP means an decrease in plastic waste per capita. With a p-value of 0.02 on the slope we have sufficient evidence to conclude that there is a relationship between the two variables.
-
-## Summary Table
-
-```{r}
-#| label: Affect of COVID on Plastic Waste vs CO2 Emissions
-
-meta_set <- meta_set %>%
-  mutate(
-    parent_company = ifelse(
-      parent_company %in% c("NULL", "null"),
-      "Grand Total",
-      parent_company
-    )
-  )
-
-
-co2_change <- co2 %>%
-  filter(year %in% c(2019, 2020),
-         country == "World") %>%
-  summarise(
-    pct_change = (co2_per_capita[year == 2020] - co2_per_capita[year == 2019]) /
-                 co2_per_capita[year == 2019] * 100
-  )
-
-plastic_data <- meta_set %>%
-  filter(parent_company == "Grand Total") %>%
-  group_by(year) %>%
-  summarise(
-    total_plastic = sum(grand_total),
-    total_population = sum(population),
-    per_capita = total_plastic / total_population
-  )
-
-plastic_change <- plastic_data %>%
-  summarise(
-    pct_change = (per_capita[year == 2020] - per_capita[year == 2019]) /
-                 per_capita[year == 2019] * 100
-  )
-
-summary_table<- tibble(
-  waste_metric = c("CO2 per capita", "Plastic per capita"),
-  percentage_change = c(co2_change$pct_change,
-                 plastic_change$pct_change)
-)
-summary_table
-```
-
-Covid seemed to have helped Co2 per capita and plastic per capita, as they have decreased by 6% in Co2 and a whole 61% in plastic per capita. This means that by 2019 to 2020 there was a significant decrease of Co2 and plastic waste. This is most likely due to the pandemic and people being isolated at home.
-
-# Research Question 2
 
 ## Data Summaries {.tabset}
 
@@ -558,24 +345,28 @@ model_data %>%
 ```{r}
 #| warning: false
 #| label: fig-rq1-facet
-#| fig-cap: "Relationship between GDP per capita and plastic waste per capita across countries in 2019 and 2020, with separate panels for each year."
-#| fig-alt: "Faceted scatterplot showing GDP per capita versus plastic waste per capita for countries in 2019 and 2020. Each panel includes a fitted trend line. The relationship appears positive in both years, allowing comparison of how the pattern changes between 2019 and 2020."
+#| fig-cap: "Relationship between GDP per capita and CO2 waste per capita across countries in 2019 and 2020, with separate panels for each year."
+#| fig-alt: "Faceted scatterplot showing GDP per capita versus CO2 waste per capita for countries in 2019 and 2020. Each panel includes a fitted trend line. The relationship appears positive in both years, allowing comparison of how the pattern changes between 2019 and 2020."
 
 ggplot(
   meta_set %>%
     filter(year %in% c(2019, 2020), parent_company == "Grand Total"),
-  aes(x = gdp_per_capita, y = plastic_waste_per_capita)
+  aes(x = gdp_per_capita, y = co2_per_capita)
 ) +
   geom_point(color = "#2C7FB8", alpha = 0.7, size = 2.5) +
-  geom_smooth(method = "lm", se = FALSE, color = "#D95F0E", linewidth = 1) +
+  geom_smooth(method = "loess", se = FALSE, color = "#D95F0E", linewidth = 1) +
   scale_x_log10(labels = scales::label_dollar()) +
   scale_y_log10(labels = scales::label_number()) +
   facet_wrap(~year) +
   labs(
-    title = "GDP per Capita vs Plastic Waste per Capita",
+    title = "GDP per Capita vs CO2 Waste per Capita",
     subtitle = "Comparison of country-level relationships in 2019 and 2020",
     x = "GDP per Capita",
-    y = "Plastic Waste per Capita"
+    y = "CO2 Waste per Capita"
   ) +
   theme_ft_rc()
 ```
+
+#Mystery Country???
+
+### We need a country that is one of: An outlier, A representative case, or A case of change (need to know we can find country-specific data suitable for a dynamic visualization). We also need to include a short “Why this country?” section (2–3 sentences) on this dashboard page. Also need a dynamic visualization and a leaflet map.
