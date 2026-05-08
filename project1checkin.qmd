@@ -3,6 +3,7 @@ format:
   dashboard:
     theme: minty
     orientation: rows
+    fit: true
     scrolling: true
     logo: logo/plastic-waste-icon-vector.jpg
     nav-buttons:
@@ -12,7 +13,7 @@ format:
         href: https://www.linkedin.com/in/mason-souza-19082a293/
 ---
 
-# Research Question 2
+# What is the relationship between GDP per capita and CO₂ emissions per capita across countries in 2019? How does population size influence this relationship?
 
 ```{r}
 #| include: false
@@ -119,42 +120,28 @@ model_data <- meta_set %>%
   )
 ```
 
-## Data Sources
+## Row {height="auto"}
 
-### 🗑️ Plastic Waste Data
+### 🗑️ Plastic Waste Dataa
 
 ***🗑️ Plastic Waste Data***
 This data set was independently gathered by Sarah Sauve to contribute to the global audit that the Break Free from Plastic organization holds each year. Data was collected in St. John, Newfoundland from 2019 to 2020. The data set includes counts of different plastic types (polyester, PVC, polyethylene, etc.), the grand total of all plastic types, number of counting events, and number of volunteers at each cleanup.
 
 ### 🌍 Population & GDP Data
+
 ***🌍 Population & GDP Data***
 Through the World Bank Group's API, we collected population and GDP data for each country in our plastic waste data set for 2019 and 2020. The World Bank coordinates and compiles data from National Statistics Agencies, Central Banks, and Government Agencies into accessible APIs. Data are gathered via household surveys, digital records, censuses, and other secondary sources.
 
 ### 🏭 CO₂ Emissions Data
+
 ***🏭 CO₂ Emissions Data***
 Our final data set contains country-level CO₂ emissions published by *Our World in Data*, sourced from the Global Carbon Project and other scientific databases, spanning 1750–2024. We restricted it to 2019–2020 to match our other data. CO₂ estimates are derived by tracking a country's net fuel consumption (extracted + imported − exported) and multiplying each fuel type by its emission factor to compute total emissions.
 
-## Research Questions
+## Row
 
-### 🔬 Our Research Questions
+### 📋 Data Summaries {.tabset}
 
-::: {style="font-size: 1.05em; line-height: 2;"}
-**Question 1 — GDP & Plastic Waste**
-
-What is the relationship between GDP per capita and plastic waste generation across countries in 2019–2020? Did the 2020 pandemic have the same effect on both metrics?
-
----
-
-**Question 2 — GDP & CO₂ Emissions**
-
-What is the relationship between GDP per capita and CO₂ emissions per capita across countries in 2019? How does population size influence this relationship?
-:::
-
-
-
-## Data Summaries {.tabset}
-
-### 🌍 GDP & CO₂ by Population
+#### 🌍 GDP & CO₂ by Population
 
 Is there a visible trend between countries' per capita GDP, CO₂ emissions, and population size?
 
@@ -210,7 +197,7 @@ gdp_co2_table |>
   )
 ```
 
-### 📈 GDP & CO₂ Rankings
+#### 📈 GDP & CO₂ Rankings
 
 Does there appear to be a relationship between the rank of a country's GDP per capita and their CO₂ per capita?
 
@@ -292,11 +279,11 @@ ranked_table |>
   )
 ```
 
-## Analysis
-
 CO₂ and GDP rank appear to move together; countries with the highest GDP per capita tend to also rank highly in CO₂ emissions. This aligns with the positive relationship found in the regression model.
 
-## 🫧 Bubble Plot: GDP vs CO₂ Emissions Per Capita
+### 📊 Visualizations {.tabset}
+
+#### 🫧 Bubble Plot: GDP vs CO₂ Emissions Per Capita
 
 ```{r}
 #| warning: false
@@ -340,7 +327,7 @@ model_data %>%
   )
 ```
 
-## 📊 GDP vs Plastic Waste Per Capita (2019 & 2020)
+#### 📊 GDP vs Plastic Waste Per Capita (2019 & 2020)
 
 ```{r}
 #| warning: false
@@ -367,6 +354,6 @@ ggplot(
   theme_ft_rc()
 ```
 
-#Mystery Country???
+# Mystery Country??? (Luxemborg would be a good one)
 
 ### We need a country that is one of: An outlier, A representative case, or A case of change (need to know we can find country-specific data suitable for a dynamic visualization). We also need to include a short “Why this country?” section (2–3 sentences) on this dashboard page. Also need a dynamic visualization and a leaflet map.
