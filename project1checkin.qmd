@@ -28,6 +28,8 @@ library(gt)
 library(hrbrthemes)
 library(viridis)
 library(hexbin)
+library(leaflet)
+library(plotly)
 
 # Load plastic waste data
 plastics <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2021/2021-01-26/plastics.csv')
@@ -118,14 +120,13 @@ model_data <- meta_set %>%
     gdp_per_capita > 0,
     plastic_waste_per_capita > 0
   )
+
+
+#New Luxembourg data
+luxembourg_data <- readLines("commuters-to-luxembourg-2019-2018-commuters-lux-2019-0.geojson")
 ```
 
 ## Row {height="auto"}
-
-### 🗑️ Plastic Waste Dataa
-
-***🗑️ Plastic Waste Data***
-This data set was independently gathered by Sarah Sauve to contribute to the global audit that the Break Free from Plastic organization holds each year. Data was collected in St. John, Newfoundland from 2019 to 2020. The data set includes counts of different plastic types (polyester, PVC, polyethylene, etc.), the grand total of all plastic types, number of counting events, and number of volunteers at each cleanup.
 
 ### 🌍 Population & GDP Data
 
@@ -291,7 +292,7 @@ CO₂ and GDP rank appear to move together; countries with the highest GDP per c
 #| fig-cap: "GDP per capita and CO2 emissions per capita across countries in 2019, with bubble size representing population."
 #| fig-alt: "Bubble plot of GDP per capita versus CO2 emissions per capita for 51 countries in 2019. Bubble size represents population and color indicates GDP level. Countries with higher GDP per capita tend to also have higher CO2 emissions per capita."
 
-model_data %>%
+plotly_bubble <- model_data %>%
   arrange(desc(population)) %>%
   mutate(
     country.x = as.factor(country.x),
@@ -305,13 +306,20 @@ model_data %>%
     gdp_level = factor(
       gdp_level,
       levels = c("Low", "Lower-Mid", "Upper-Mid", "High", "Other")
-    )
+    ),
+     hover_text = paste0(
+      country.x,
+      "<br>GDP per capita: $", format(round(gdp_per_capita, 0), big.mark = ","),
+      "<br>CO₂ per capita: ", round(co2_per_capita, 2),
+      "<br>Population: ", format(population, big.mark = ",")
+     )
   ) %>%
   ggplot(aes(
     x = gdp_per_capita,
     y = co2_per_capita,
     size = population,
-    color = gdp_level
+    color = gdp_level,
+    text = hover_text
   )) +
   geom_point(alpha = 0.65) +
   scale_size(range = c(2, 14), name = "Population") +
@@ -323,8 +331,10 @@ model_data %>%
     x = "GDP Per Capita",
     y = "CO2 Emissions Per Capita",
     title = "Bubble Plot of GDP and CO2 Emissions Per Capita",
-    subtitle = "Countries in 2019, with bubble size representing population"
+    subtitle = "2019 countries with population size"
   )
+
+ggplotly(plotly_bubble, tooltip = "text")
 ```
 
 #### 📊 GDP vs Plastic Waste Per Capita (2019 & 2020)
@@ -357,3 +367,11 @@ ggplot(
 # Mystery Country??? (Luxemborg would be a good one)
 
 ### We need a country that is one of: An outlier, A representative case, or A case of change (need to know we can find country-specific data suitable for a dynamic visualization). We also need to include a short “Why this country?” section (2–3 sentences) on this dashboard page. Also need a dynamic visualization and a leaflet map.
+
+
+### A country we found very interesting in this data was Luxembourg. We found it facinating that the GDP per capita was the largest in our dataset (by a considerable margin) and it was also third in CO2 emmissions per capita. Yet despite this the whole country has a population that hardly exceeds 600,000 people.
+
+```{r}
+#| label: Chunk for animated/plotly map
+
+```
