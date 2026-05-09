@@ -366,12 +366,41 @@ ggplot(
 
 # Mystery Country??? (Luxemborg would be a good one)
 
+##Row
+
 ### We need a country that is one of: An outlier, A representative case, or A case of change (need to know we can find country-specific data suitable for a dynamic visualization). We also need to include a short “Why this country?” section (2–3 sentences) on this dashboard page. Also need a dynamic visualization and a leaflet map.
 
 
 ### A country we found very interesting in this data was Luxembourg. We found it facinating that the GDP per capita was the largest in our dataset (by a considerable margin) and it was also third in CO2 emmissions per capita. Yet despite this the whole country has a population that hardly exceeds 600,000 people.
 
+
+```{r}
+#| label: Leaflet Map
+library(leaflet)
+library(scales)
+
+germany <- model_data |> filter(country.x == "Germany")
+
+leaflet() |>
+  addProviderTiles(providers$CartoDB.Positron) |>
+  setView(lng = 7.5, lat = 50.0, zoom = 6) |>
+  addCircleMarkers(
+    lng = 6.1296, lat = 49.8153,
+    radius = 12,
+    color = "#e63946", fillColor = "#e63946", fillOpacity = 0.8,
+    popup = paste0(
+      "<b>Luxembourg (2019)</b><br>",
+      "Population: ", comma(lux$population), "<br>",
+      "GDP per Capita: $", comma(round(lux$gdp_per_capita)), "<br>",
+      "CO₂ per Capita: ", round(lux$co2_per_capita, 2), " tonnes<br>",
+      "Plastic Waste per Capita: ", round(lux$plastic_waste_per_capita * 1e6, 2), " kg"
+    )
+  )
+
+```
+
 ```{r}
 #| label: Chunk for animated/plotly map
+
 
 ```
