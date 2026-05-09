@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.42">
+<meta name="generator" content="quarto-1.9.36">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>project1checkin</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -24,46 +27,51 @@ ul.task-list li input[type="checkbox"] {
 
 
 <script src="project1checkin_files/libs/clipboard/clipboard.min.js"></script>
-<script src="project1checkin_files/libs/quarto-html/quarto.js"></script>
+<script src="project1checkin_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="project1checkin_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="project1checkin_files/libs/quarto-html/popper.min.js"></script>
 <script src="project1checkin_files/libs/quarto-html/tippy.umd.min.js"></script>
 <script src="project1checkin_files/libs/quarto-html/anchor.min.js"></script>
 <link href="project1checkin_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="project1checkin_files/libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="project1checkin_files/libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="project1checkin_files/libs/quarto-html/quarto-syntax-highlighting-dark-f418161beb48e0141c760e455f12af2c.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="project1checkin_files/libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="project1checkin_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="project1checkin_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="project1checkin_files/libs/bootstrap/bootstrap-0bf46a0733e4f064e04bd5b777e0025b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="project1checkin_files/libs/bootstrap/bootstrap-29247f6622f5d4e2c4b7af58d8773bb4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="project1checkin_files/libs/bootstrap/bootstrap-dark-29247f6622f5d4e2c4b7af58d8773bb4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="project1checkin_files/libs/bootstrap/bootstrap-29247f6622f5d4e2c4b7af58d8773bb4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="project1checkin_files/libs/quarto-dashboard/quarto-dashboard.js"></script>
 <script src="project1checkin_files/libs/quarto-dashboard/stickythead.js"></script>
-<script src="project1checkin_files/libs/quarto-dashboard/datatables.min.js" kdttablesentinel="true"></script>
-<script src="project1checkin_files/libs/quarto-dashboard/pdfmake.min.js" kdttablesentinel="true"></script>
-<script src="project1checkin_files/libs/quarto-dashboard/vfs_fonts.js" kdttablesentinel="true"></script>
+
+
+
 <script src="project1checkin_files/libs/quarto-dashboard/web-components.js" type="module"></script>
 <script src="project1checkin_files/libs/quarto-dashboard/components.js"></script>
-<link href="project1checkin_files/libs/quarto-dashboard/datatables.min.css" rel="stylesheet" kdttablesentinel="true">
+
 <link href="project1checkin_files/libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
-
 <script src="project1checkin_files/libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
-
 <script src="project1checkin_files/libs/plotly-binding-4.12.0/plotly.js"></script>
-
 <script src="project1checkin_files/libs/typedarray-0.1/typedarray.min.js"></script>
-
-<script src="project1checkin_files/libs/jquery-3.5.1/jquery.min.js"></script>
-
+<script src="project1checkin_files/libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <link href="project1checkin_files/libs/crosstalk-1.2.2/css/crosstalk.min.css" rel="stylesheet">
-
 <script src="project1checkin_files/libs/crosstalk-1.2.2/js/crosstalk.min.js"></script>
-
 <link href="project1checkin_files/libs/plotly-htmlwidgets-css-2.25.2/plotly-htmlwidgets.css" rel="stylesheet">
-
 <script src="project1checkin_files/libs/plotly-main-2.25.2/plotly-latest.min.js"></script>
-
+<link href="project1checkin_files/libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
+<script src="project1checkin_files/libs/leaflet-1.3.1/leaflet.js"></script>
+<link href="project1checkin_files/libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet">
+<script src="project1checkin_files/libs/proj4-2.6.2/proj4.min.js"></script>
+<script src="project1checkin_files/libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+<link href="project1checkin_files/libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet">
+<script src="project1checkin_files/libs/leaflet-binding-2.2.3/leaflet.js"></script>
+<script src="project1checkin_files/libs/leaflet-providers-3.0.0/leaflet-providers.js"></script>
+<script src="project1checkin_files/libs/leaflet-providers-plugin-2.2.3/leaflet-providers-plugin.js"></script>
 
 
 </head>
 
-<body class="quarto-dashboard fullcontent">
+<body class="quarto-dashboard fullcontent quarto-light">
 
 <header id="quarto-dashboard-header">
 <nav class="navbar navbar-expand-md slim" data-bs-theme="dark">
@@ -73,22 +81,23 @@ ul.task-list li input[type="checkbox"] {
     </button>    
 
 
-    <div class="navbar-brand-container">       
-    <a href="#"><img src="logo/plastic-waste-icon-vector.jpg" alt="" class="navbar-logo d-inline-block"></a>
+    <div class="navbar-brand-container">
+    <a href="#"><img src="logo/plastic-waste-icon-vector.jpg" alt="" class="navbar-logo light-content d-inline-block"></a>
+    <a href="#"><img src="logo/plastic-waste-icon-vector.jpg" alt="" class="navbar-logo dark-content d-inline-block"></a>
       <div class="navbar-title">
         
         
         
       </div>
     </div>
-<div id="dashboard-collapse" class="navbar-collapse collapse"><ul class="navbar-nav navbar-nav-scroll me-auto" role="tablist"><li class="nav-item" role="presentation"><a id="tab-what-is-the-relationship-between-gdp-per-capita-and-co₂-emissions-per-capita-across-countries-in-2019-how-does-population-size-influence-this-relationship" class="nav-link active" data-bs-toggle="tab" role="tab" data-bs-target="#what-is-the-relationship-between-gdp-per-capita-and-co₂-emissions-per-capita-across-countries-in-2019-how-does-population-size-influence-this-relationship" data-scrolling="true" href="#what-is-the-relationship-between-gdp-per-capita-and-co₂-emissions-per-capita-across-countries-in-2019-how-does-population-size-influence-this-relationship" aria-controls="what-is-the-relationship-between-gdp-per-capita-and-co₂-emissions-per-capita-across-countries-in-2019-how-does-population-size-influence-this-relationship" aria-selected="true"><span class="nav-link-text">What is the relationship between GDP per capita and CO₂ emissions per capita across countries in 2019? How does population size influence this relationship?</span></a></li><li class="nav-item" role="presentation"><a id="tab-mystery-country-luxemborg-would-be-a-good-one" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#mystery-country-luxemborg-would-be-a-good-one" data-scrolling="true" href="#mystery-country-luxemborg-would-be-a-good-one" aria-controls="mystery-country-luxemborg-would-be-a-good-one" aria-selected="false"><span class="nav-link-text">Mystery Country??? (Luxemborg would be a good one)</span></a></li></ul><div class="quarto-dashboard-links"><a class="quarto-dashboard-link" href="mailto:mpsouza@calpoly.edu"><i class="bi bi-envelope"></i></a><a class="quarto-dashboard-link" href="https://www.linkedin.com/in/mason-souza-19082a293/"><i class="bi bi-linkedin"></i></a></div></div></div>
+<div id="dashboard-collapse" class="navbar-collapse collapse"><ul class="navbar-nav navbar-nav-scroll me-auto" role="tablist"><li class="nav-item" role="presentation"><a id="tab-what-is-the-relationship-between-gdp-per-capita-and-co₂-emissions-per-capita-across-countries-in-2019-how-does-population-size-influence-this-relationship" class="nav-link active" data-bs-toggle="tab" role="tab" data-bs-target="#what-is-the-relationship-between-gdp-per-capita-and-co₂-emissions-per-capita-across-countries-in-2019-how-does-population-size-influence-this-relationship" data-scrolling="true" href="#what-is-the-relationship-between-gdp-per-capita-and-co₂-emissions-per-capita-across-countries-in-2019-how-does-population-size-influence-this-relationship" aria-controls="what-is-the-relationship-between-gdp-per-capita-and-co₂-emissions-per-capita-across-countries-in-2019-how-does-population-size-influence-this-relationship" aria-selected="true"><span class="nav-link-text">What is the relationship between GDP per capita and CO₂ emissions per capita across countries in 2019? How does population size influence this relationship?</span></a></li><li class="nav-item" role="presentation"><a id="tab-inside-look-at-luxemborg" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#inside-look-at-luxemborg" data-scrolling="true" href="#inside-look-at-luxemborg" aria-controls="inside-look-at-luxemborg" aria-selected="false"><span class="nav-link-text">Inside look at Luxemborg</span></a></li></ul><div class="quarto-dashboard-links"><a class="quarto-dashboard-link" href="mailto:mpsouza@calpoly.edu"><i class="bi bi-envelope"></i></a><a class="quarto-dashboard-link" href="https://www.linkedin.com/in/mason-souza-19082a293/"><i class="bi bi-linkedin"></i></a></div></div></div>
 </nav>
 </header>
 <div class="page-layout-custom quarto-dashboard-content bslib-gap-spacing html-fill-container dashboard-scrolling quarto-dashboard-pages">  
 
 <div class="bslib-grid-item html-fill-item tab-content bslib-grid" data-layout="flow" style="display: grid; grid-template-rows: minmax(3em, 1fr); grid-auto-columns: minmax(0, 1fr);">
 <div id="what-is-the-relationship-between-gdp-per-capita-and-co₂-emissions-per-capita-across-countries-in-2019-how-does-population-size-influence-this-relationship" class="dashboard-page tab-pane show active html-fill-item html-fill-container" data-orientation="rows" aria-labelledby="tab-what-is-the-relationship-between-gdp-per-capita-and-co₂-emissions-per-capita-across-countries-in-2019-how-does-population-size-influence-this-relationship">
-<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, auto) minmax(3em, 1fr); grid-auto-columns: minmax(0, 1fr);">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 1fr) minmax(3em, 1fr); grid-auto-columns: minmax(0, 1fr);">
 <div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr) minmax(3em, 1fr);
 grid-auto-rows: minmax(0, 1fr);">
 <div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, max-content); grid-auto-columns: minmax(0, 1fr);">
@@ -118,9 +127,9 @@ grid-auto-rows: minmax(0, 1fr);">
 <div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr) minmax(3em, 1fr);
 grid-auto-rows: minmax(0, 1fr);">
 <div class="card tabset html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
-<div class="card-header bslib-navs-card-title"><div class="card-title"><span style="display: inline">
+<div class="card-header dashboard-card-no-title bslib-navs-card-title">
 
-</span></div><ul class="nav nav-tabs card-header-tabs" role="tablist" data-tabsetid="card-tabset-3"><li class="nav-item" role="presentation"><a href="#card-tabset-3-1" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="🌍 GDP &amp; CO₂ by Population" aria-selected="true" class="nav-link active">🌍 GDP &amp; CO₂ by Population</a></li><li class="nav-item" role="presentation"><a href="#card-tabset-3-2" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="📈 GDP &amp; CO₂ Rankings" aria-selected="false" class="nav-link">📈 GDP &amp; CO₂ Rankings</a></li></ul></div>
+<ul class="nav nav-tabs card-header-tabs" role="tablist" data-tabsetid="card-tabset-3"><li class="nav-item" role="presentation"><a href="#card-tabset-3-1" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="🌍 GDP &amp; CO₂ by Population" aria-selected="true" class="nav-link active">🌍 GDP &amp; CO₂ by Population</a></li><li class="nav-item" role="presentation"><a href="#card-tabset-3-2" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="📈 GDP &amp; CO₂ Rankings" aria-selected="false" class="nav-link">📈 GDP &amp; CO₂ Rankings</a></li></ul></div>
 
 
 <div class="tab-content html-fill-item html-fill-container" data-tabset-id="card-tabset-3"><div class="tab-pane active show html-fill-item html-fill-container" role="tabpanel" id="card-tabset-3-1"><div class="card-body html-fill-item html-fill-container" data-title="🌍 GDP &amp; CO₂ by Population">
@@ -138,23 +147,23 @@ grid-auto-rows: minmax(0, 1fr);">
 <div class="card cell html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
 <div class="card-body html-fill-item html-fill-container">
 <div class="cell-output-display html-fill-item html-fill-container">
-<div id="szdxqqzuyt" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;" class="html-fill-item html-fill-container">
-<style>#szdxqqzuyt table {
+<div id="owjbaqakpk" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;" class="html-fill-item html-fill-container">
+<style>#owjbaqakpk table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#szdxqqzuyt thead, #szdxqqzuyt tbody, #szdxqqzuyt tfoot, #szdxqqzuyt tr, #szdxqqzuyt td, #szdxqqzuyt th {
+#owjbaqakpk thead, #owjbaqakpk tbody, #owjbaqakpk tfoot, #owjbaqakpk tr, #owjbaqakpk td, #owjbaqakpk th {
   border-style: none;
 }
 
-#szdxqqzuyt p {
+#owjbaqakpk p {
   margin: 0;
   padding: 0;
 }
 
-#szdxqqzuyt .gt_table {
+#owjbaqakpk .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -180,12 +189,12 @@ grid-auto-rows: minmax(0, 1fr);">
   border-left-color: #D3D3D3;
 }
 
-#szdxqqzuyt .gt_caption {
+#owjbaqakpk .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#szdxqqzuyt .gt_title {
+#owjbaqakpk .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -197,7 +206,7 @@ grid-auto-rows: minmax(0, 1fr);">
   border-bottom-width: 0;
 }
 
-#szdxqqzuyt .gt_subtitle {
+#owjbaqakpk .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -209,7 +218,7 @@ grid-auto-rows: minmax(0, 1fr);">
   border-top-width: 0;
 }
 
-#szdxqqzuyt .gt_heading {
+#owjbaqakpk .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -221,13 +230,13 @@ grid-auto-rows: minmax(0, 1fr);">
   border-right-color: #D3D3D3;
 }
 
-#szdxqqzuyt .gt_bottom_border {
+#owjbaqakpk .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#szdxqqzuyt .gt_col_headings {
+#owjbaqakpk .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -242,7 +251,7 @@ grid-auto-rows: minmax(0, 1fr);">
   border-right-color: #D3D3D3;
 }
 
-#szdxqqzuyt .gt_col_heading {
+#owjbaqakpk .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -262,7 +271,7 @@ grid-auto-rows: minmax(0, 1fr);">
   overflow-x: hidden;
 }
 
-#szdxqqzuyt .gt_column_spanner_outer {
+#owjbaqakpk .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -274,15 +283,15 @@ grid-auto-rows: minmax(0, 1fr);">
   padding-right: 4px;
 }
 
-#szdxqqzuyt .gt_column_spanner_outer:first-child {
+#owjbaqakpk .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#szdxqqzuyt .gt_column_spanner_outer:last-child {
+#owjbaqakpk .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#szdxqqzuyt .gt_column_spanner {
+#owjbaqakpk .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -294,11 +303,11 @@ grid-auto-rows: minmax(0, 1fr);">
   width: 100%;
 }
 
-#szdxqqzuyt .gt_spanner_row {
+#owjbaqakpk .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#szdxqqzuyt .gt_group_heading {
+#owjbaqakpk .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -324,7 +333,7 @@ grid-auto-rows: minmax(0, 1fr);">
   text-align: left;
 }
 
-#szdxqqzuyt .gt_empty_group_heading {
+#owjbaqakpk .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -339,15 +348,15 @@ grid-auto-rows: minmax(0, 1fr);">
   vertical-align: middle;
 }
 
-#szdxqqzuyt .gt_from_md > :first-child {
+#owjbaqakpk .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#szdxqqzuyt .gt_from_md > :last-child {
+#owjbaqakpk .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#szdxqqzuyt .gt_row {
+#owjbaqakpk .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -366,7 +375,7 @@ grid-auto-rows: minmax(0, 1fr);">
   overflow-x: hidden;
 }
 
-#szdxqqzuyt .gt_stub {
+#owjbaqakpk .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -379,7 +388,7 @@ grid-auto-rows: minmax(0, 1fr);">
   padding-right: 5px;
 }
 
-#szdxqqzuyt .gt_stub_row_group {
+#owjbaqakpk .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -393,15 +402,15 @@ grid-auto-rows: minmax(0, 1fr);">
   vertical-align: top;
 }
 
-#szdxqqzuyt .gt_row_group_first td {
+#owjbaqakpk .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#szdxqqzuyt .gt_row_group_first th {
+#owjbaqakpk .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#szdxqqzuyt .gt_summary_row {
+#owjbaqakpk .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -411,16 +420,16 @@ grid-auto-rows: minmax(0, 1fr);">
   padding-right: 5px;
 }
 
-#szdxqqzuyt .gt_first_summary_row {
+#owjbaqakpk .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#szdxqqzuyt .gt_first_summary_row.thick {
+#owjbaqakpk .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#szdxqqzuyt .gt_last_summary_row {
+#owjbaqakpk .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -430,7 +439,7 @@ grid-auto-rows: minmax(0, 1fr);">
   border-bottom-color: #D3D3D3;
 }
 
-#szdxqqzuyt .gt_grand_summary_row {
+#owjbaqakpk .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -440,7 +449,7 @@ grid-auto-rows: minmax(0, 1fr);">
   padding-right: 5px;
 }
 
-#szdxqqzuyt .gt_first_grand_summary_row {
+#owjbaqakpk .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -450,7 +459,7 @@ grid-auto-rows: minmax(0, 1fr);">
   border-top-color: #D3D3D3;
 }
 
-#szdxqqzuyt .gt_last_grand_summary_row_top {
+#owjbaqakpk .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -460,11 +469,11 @@ grid-auto-rows: minmax(0, 1fr);">
   border-bottom-color: #D3D3D3;
 }
 
-#szdxqqzuyt .gt_striped {
+#owjbaqakpk .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#szdxqqzuyt .gt_table_body {
+#owjbaqakpk .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -473,7 +482,7 @@ grid-auto-rows: minmax(0, 1fr);">
   border-bottom-color: #D3D3D3;
 }
 
-#szdxqqzuyt .gt_footnotes {
+#owjbaqakpk .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -487,7 +496,7 @@ grid-auto-rows: minmax(0, 1fr);">
   border-right-color: #D3D3D3;
 }
 
-#szdxqqzuyt .gt_footnote {
+#owjbaqakpk .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -496,7 +505,7 @@ grid-auto-rows: minmax(0, 1fr);">
   padding-right: 5px;
 }
 
-#szdxqqzuyt .gt_sourcenotes {
+#owjbaqakpk .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -510,7 +519,7 @@ grid-auto-rows: minmax(0, 1fr);">
   border-right-color: #D3D3D3;
 }
 
-#szdxqqzuyt .gt_sourcenote {
+#owjbaqakpk .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -518,84 +527,84 @@ grid-auto-rows: minmax(0, 1fr);">
   padding-right: 5px;
 }
 
-#szdxqqzuyt .gt_left {
+#owjbaqakpk .gt_left {
   text-align: left;
 }
 
-#szdxqqzuyt .gt_center {
+#owjbaqakpk .gt_center {
   text-align: center;
 }
 
-#szdxqqzuyt .gt_right {
+#owjbaqakpk .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#szdxqqzuyt .gt_font_normal {
+#owjbaqakpk .gt_font_normal {
   font-weight: normal;
 }
 
-#szdxqqzuyt .gt_font_bold {
+#owjbaqakpk .gt_font_bold {
   font-weight: bold;
 }
 
-#szdxqqzuyt .gt_font_italic {
+#owjbaqakpk .gt_font_italic {
   font-style: italic;
 }
 
-#szdxqqzuyt .gt_super {
+#owjbaqakpk .gt_super {
   font-size: 65%;
 }
 
-#szdxqqzuyt .gt_footnote_marks {
+#owjbaqakpk .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#szdxqqzuyt .gt_asterisk {
+#owjbaqakpk .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#szdxqqzuyt .gt_indent_1 {
+#owjbaqakpk .gt_indent_1 {
   text-indent: 5px;
 }
 
-#szdxqqzuyt .gt_indent_2 {
+#owjbaqakpk .gt_indent_2 {
   text-indent: 10px;
 }
 
-#szdxqqzuyt .gt_indent_3 {
+#owjbaqakpk .gt_indent_3 {
   text-indent: 15px;
 }
 
-#szdxqqzuyt .gt_indent_4 {
+#owjbaqakpk .gt_indent_4 {
   text-indent: 20px;
 }
 
-#szdxqqzuyt .gt_indent_5 {
+#owjbaqakpk .gt_indent_5 {
   text-indent: 25px;
 }
 
-#szdxqqzuyt .katex-display {
+#owjbaqakpk .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#szdxqqzuyt div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#owjbaqakpk div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
 
-<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-bootstrap="false">
 <caption>Countries GDP per capita &amp; CO₂ per capita, sorted by population</caption>
 <thead>
 <tr class="gt_heading header">
-<th colspan="4" class="gt_heading gt_title gt_font_normal"><strong>GDP vs CO₂ Emissions per Capita (2019)</strong></th>
+<td colspan="4" class="gt_heading gt_title gt_font_normal"><strong>GDP vs CO₂ Emissions per Capita (2019)</strong></td>
 </tr>
 <tr class="gt_heading even">
-<th colspan="4" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border">Top 10 countries sorted by population</th>
+<td colspan="4" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border">Top 10 countries sorted by population</td>
 </tr>
 <tr class="gt_col_headings header">
 <th id="country.x" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Country</th>
@@ -693,23 +702,23 @@ grid-auto-rows: minmax(0, 1fr);">
 <div class="card cell html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
 <div class="card-body html-fill-item html-fill-container">
 <div class="cell-output-display html-fill-item html-fill-container">
-<div id="rdplprogxf" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;" class="html-fill-item html-fill-container">
-<style>#rdplprogxf table {
+<div id="xbmiuwlzbw" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;" class="html-fill-item html-fill-container">
+<style>#xbmiuwlzbw table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#rdplprogxf thead, #rdplprogxf tbody, #rdplprogxf tfoot, #rdplprogxf tr, #rdplprogxf td, #rdplprogxf th {
+#xbmiuwlzbw thead, #xbmiuwlzbw tbody, #xbmiuwlzbw tfoot, #xbmiuwlzbw tr, #xbmiuwlzbw td, #xbmiuwlzbw th {
   border-style: none;
 }
 
-#rdplprogxf p {
+#xbmiuwlzbw p {
   margin: 0;
   padding: 0;
 }
 
-#rdplprogxf .gt_table {
+#xbmiuwlzbw .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -735,12 +744,12 @@ grid-auto-rows: minmax(0, 1fr);">
   border-left-color: #D3D3D3;
 }
 
-#rdplprogxf .gt_caption {
+#xbmiuwlzbw .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#rdplprogxf .gt_title {
+#xbmiuwlzbw .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -752,7 +761,7 @@ grid-auto-rows: minmax(0, 1fr);">
   border-bottom-width: 0;
 }
 
-#rdplprogxf .gt_subtitle {
+#xbmiuwlzbw .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -764,7 +773,7 @@ grid-auto-rows: minmax(0, 1fr);">
   border-top-width: 0;
 }
 
-#rdplprogxf .gt_heading {
+#xbmiuwlzbw .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -776,13 +785,13 @@ grid-auto-rows: minmax(0, 1fr);">
   border-right-color: #D3D3D3;
 }
 
-#rdplprogxf .gt_bottom_border {
+#xbmiuwlzbw .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#rdplprogxf .gt_col_headings {
+#xbmiuwlzbw .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -797,7 +806,7 @@ grid-auto-rows: minmax(0, 1fr);">
   border-right-color: #D3D3D3;
 }
 
-#rdplprogxf .gt_col_heading {
+#xbmiuwlzbw .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -817,7 +826,7 @@ grid-auto-rows: minmax(0, 1fr);">
   overflow-x: hidden;
 }
 
-#rdplprogxf .gt_column_spanner_outer {
+#xbmiuwlzbw .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -829,15 +838,15 @@ grid-auto-rows: minmax(0, 1fr);">
   padding-right: 4px;
 }
 
-#rdplprogxf .gt_column_spanner_outer:first-child {
+#xbmiuwlzbw .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#rdplprogxf .gt_column_spanner_outer:last-child {
+#xbmiuwlzbw .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#rdplprogxf .gt_column_spanner {
+#xbmiuwlzbw .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -849,11 +858,11 @@ grid-auto-rows: minmax(0, 1fr);">
   width: 100%;
 }
 
-#rdplprogxf .gt_spanner_row {
+#xbmiuwlzbw .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#rdplprogxf .gt_group_heading {
+#xbmiuwlzbw .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -879,7 +888,7 @@ grid-auto-rows: minmax(0, 1fr);">
   text-align: left;
 }
 
-#rdplprogxf .gt_empty_group_heading {
+#xbmiuwlzbw .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -894,15 +903,15 @@ grid-auto-rows: minmax(0, 1fr);">
   vertical-align: middle;
 }
 
-#rdplprogxf .gt_from_md > :first-child {
+#xbmiuwlzbw .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#rdplprogxf .gt_from_md > :last-child {
+#xbmiuwlzbw .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#rdplprogxf .gt_row {
+#xbmiuwlzbw .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -921,7 +930,7 @@ grid-auto-rows: minmax(0, 1fr);">
   overflow-x: hidden;
 }
 
-#rdplprogxf .gt_stub {
+#xbmiuwlzbw .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -934,7 +943,7 @@ grid-auto-rows: minmax(0, 1fr);">
   padding-right: 5px;
 }
 
-#rdplprogxf .gt_stub_row_group {
+#xbmiuwlzbw .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -948,15 +957,15 @@ grid-auto-rows: minmax(0, 1fr);">
   vertical-align: top;
 }
 
-#rdplprogxf .gt_row_group_first td {
+#xbmiuwlzbw .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#rdplprogxf .gt_row_group_first th {
+#xbmiuwlzbw .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#rdplprogxf .gt_summary_row {
+#xbmiuwlzbw .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -966,16 +975,16 @@ grid-auto-rows: minmax(0, 1fr);">
   padding-right: 5px;
 }
 
-#rdplprogxf .gt_first_summary_row {
+#xbmiuwlzbw .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#rdplprogxf .gt_first_summary_row.thick {
+#xbmiuwlzbw .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#rdplprogxf .gt_last_summary_row {
+#xbmiuwlzbw .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -985,7 +994,7 @@ grid-auto-rows: minmax(0, 1fr);">
   border-bottom-color: #D3D3D3;
 }
 
-#rdplprogxf .gt_grand_summary_row {
+#xbmiuwlzbw .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -995,7 +1004,7 @@ grid-auto-rows: minmax(0, 1fr);">
   padding-right: 5px;
 }
 
-#rdplprogxf .gt_first_grand_summary_row {
+#xbmiuwlzbw .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1005,7 +1014,7 @@ grid-auto-rows: minmax(0, 1fr);">
   border-top-color: #D3D3D3;
 }
 
-#rdplprogxf .gt_last_grand_summary_row_top {
+#xbmiuwlzbw .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1015,11 +1024,11 @@ grid-auto-rows: minmax(0, 1fr);">
   border-bottom-color: #D3D3D3;
 }
 
-#rdplprogxf .gt_striped {
+#xbmiuwlzbw .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#rdplprogxf .gt_table_body {
+#xbmiuwlzbw .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1028,7 +1037,7 @@ grid-auto-rows: minmax(0, 1fr);">
   border-bottom-color: #D3D3D3;
 }
 
-#rdplprogxf .gt_footnotes {
+#xbmiuwlzbw .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1042,7 +1051,7 @@ grid-auto-rows: minmax(0, 1fr);">
   border-right-color: #D3D3D3;
 }
 
-#rdplprogxf .gt_footnote {
+#xbmiuwlzbw .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1051,7 +1060,7 @@ grid-auto-rows: minmax(0, 1fr);">
   padding-right: 5px;
 }
 
-#rdplprogxf .gt_sourcenotes {
+#xbmiuwlzbw .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1065,7 +1074,7 @@ grid-auto-rows: minmax(0, 1fr);">
   border-right-color: #D3D3D3;
 }
 
-#rdplprogxf .gt_sourcenote {
+#xbmiuwlzbw .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1073,77 +1082,77 @@ grid-auto-rows: minmax(0, 1fr);">
   padding-right: 5px;
 }
 
-#rdplprogxf .gt_left {
+#xbmiuwlzbw .gt_left {
   text-align: left;
 }
 
-#rdplprogxf .gt_center {
+#xbmiuwlzbw .gt_center {
   text-align: center;
 }
 
-#rdplprogxf .gt_right {
+#xbmiuwlzbw .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#rdplprogxf .gt_font_normal {
+#xbmiuwlzbw .gt_font_normal {
   font-weight: normal;
 }
 
-#rdplprogxf .gt_font_bold {
+#xbmiuwlzbw .gt_font_bold {
   font-weight: bold;
 }
 
-#rdplprogxf .gt_font_italic {
+#xbmiuwlzbw .gt_font_italic {
   font-style: italic;
 }
 
-#rdplprogxf .gt_super {
+#xbmiuwlzbw .gt_super {
   font-size: 65%;
 }
 
-#rdplprogxf .gt_footnote_marks {
+#xbmiuwlzbw .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#rdplprogxf .gt_asterisk {
+#xbmiuwlzbw .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#rdplprogxf .gt_indent_1 {
+#xbmiuwlzbw .gt_indent_1 {
   text-indent: 5px;
 }
 
-#rdplprogxf .gt_indent_2 {
+#xbmiuwlzbw .gt_indent_2 {
   text-indent: 10px;
 }
 
-#rdplprogxf .gt_indent_3 {
+#xbmiuwlzbw .gt_indent_3 {
   text-indent: 15px;
 }
 
-#rdplprogxf .gt_indent_4 {
+#xbmiuwlzbw .gt_indent_4 {
   text-indent: 20px;
 }
 
-#rdplprogxf .gt_indent_5 {
+#xbmiuwlzbw .gt_indent_5 {
   text-indent: 25px;
 }
 
-#rdplprogxf .katex-display {
+#xbmiuwlzbw .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#rdplprogxf div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#xbmiuwlzbw div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
 
-<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-bootstrap="false">
 <caption>Table 6. Comparison of country rankings for GDP per capita and CO₂ emissions per capita in 2019.</caption>
 <colgroup>
 <col style="width: 20%">
@@ -1154,10 +1163,10 @@ grid-auto-rows: minmax(0, 1fr);">
 </colgroup>
 <thead>
 <tr class="gt_heading header">
-<th colspan="5" class="gt_heading gt_title gt_font_normal"><strong>GDP and CO₂ Per-Capita Ranking Comparison</strong></th>
+<td colspan="5" class="gt_heading gt_title gt_font_normal"><strong>GDP and CO₂ Per-Capita Ranking Comparison</strong></td>
 </tr>
 <tr class="gt_heading even">
-<th colspan="5" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border">Top 10 countries ranked by GDP per capita in 2019</th>
+<td colspan="5" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border">Top 10 countries ranked by GDP per capita in 2019</td>
 </tr>
 <tr class="gt_col_headings gt_spanner_row header">
 <th rowspan="2" id="country" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Country</th>
@@ -1275,9 +1284,9 @@ Global Rankings
         <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
     </span>
 </bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card tabset html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
-<div class="card-header bslib-navs-card-title"><div class="card-title"><span style="display: inline">
+<div class="card-header dashboard-card-no-title bslib-navs-card-title">
 
-</span></div><ul class="nav nav-tabs card-header-tabs" role="tablist" data-tabsetid="card-tabset-9"><li class="nav-item" role="presentation"><a href="#card-tabset-9-1" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="🫧 Bubble Plot: GDP vs CO₂ Emissions Per Capita" aria-selected="true" class="nav-link active">🫧 Bubble Plot: GDP vs CO₂ Emissions Per Capita</a></li><li class="nav-item" role="presentation"><a href="#card-tabset-9-2" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="📊 GDP vs Plastic Waste Per Capita (2019 &amp; 2020)" aria-selected="false" class="nav-link">📊 GDP vs Plastic Waste Per Capita (2019 &amp; 2020)</a></li></ul></div>
+<ul class="nav nav-tabs card-header-tabs" role="tablist" data-tabsetid="card-tabset-9"><li class="nav-item" role="presentation"><a href="#card-tabset-9-1" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="🫧 Bubble Plot: GDP vs CO₂ Emissions Per Capita" aria-selected="true" class="nav-link active">🫧 Bubble Plot: GDP vs CO₂ Emissions Per Capita</a></li><li class="nav-item" role="presentation"><a href="#card-tabset-9-2" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="📊 GDP vs Plastic Waste Per Capita (2019 &amp; 2020)" aria-selected="false" class="nav-link">📊 GDP vs Plastic Waste Per Capita (2019 &amp; 2020)</a></li></ul></div>
 
 
 <div class="tab-content html-fill-item html-fill-container" data-tabset-id="card-tabset-9"><div class="tab-pane active show html-fill-item html-fill-container" role="tabpanel" id="card-tabset-9-1"><div class="card-body html-fill-item html-fill-container" data-title="🫧 Bubble Plot: GDP vs CO₂ Emissions Per Capita">
@@ -1287,8 +1296,8 @@ Global Rankings
 <div id="fig-rq2-bubble" class="cell-output-display quarto-float quarto-figure quarto-figure-center html-fill-item html-fill-container">
 <figure class="quarto-float quarto-float-fig figure html-fill-item html-fill-container">
 <div aria-describedby="fig-rq2-bubble-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca" class="html-fill-item html-fill-container">
-<div class="plotly html-widget html-fill-item html-fill-container" id="htmlwidget-f0a401b6b489511f8e26" style="width:100%;height:406px;"></div>
-<script type="application/json" data-for="htmlwidget-f0a401b6b489511f8e26">{"x":{"data":[{"x":[3.0133826614967414,3.3397809362005533,3.3307724218388692,3.19179367698273,3.598931139812735,2.8835779357582645,2.9085126174380211,3.053393830092781,3.547635812484109,3.9921663598097581,4.4128881283610486,4.2378189726100528,4.3087792036977692,3.553500947674606,5.0517947397618936,3.9525381263639323,4.0696728311222117],"y":[-0.56224943717961195,-0.27984069659404309,-0.42712839779951983,-0.42365864979420714,-0.025949097207122653,-0.57186520597121115,-0.95467702121334252,-0.38299965887910109,0.41077723337720984,0.78168358450735076,0.82898195400792307,0.60075514963961807,0.75534118381154758,0.3109056293761413,1.1965077919396958,0.60734777676841345,0.61140463771159348],"text":["Tanzania<br>GDP per capita: $  1,031<br>CO₂ per capita: 0.27<br>Population:    59,174,889","Ghana<br>GDP per capita: $  2,187<br>CO₂ per capita: 0.52<br>Population:    31,258,943","Cote D_ivoire<br>GDP per capita: $  2,142<br>CO₂ per capita: 0.37<br>Population:    28,193,014","Cameroon<br>GDP per capita: $  1,555<br>CO₂ per capita: 0.38<br>Population:    25,506,095","Sri Lanka<br>GDP per capita: $  3,971<br>CO₂ per capita: 0.94<br>Population:    22,410,552","Burkina Faso<br>GDP per capita: $    765<br>CO₂ per capita: 0.27<br>Population:    20,961,956","Rwanda<br>GDP per capita: $    810<br>CO₂ per capita: 0.11<br>Population:    12,776,102","Benin<br>GDP per capita: $  1,131<br>CO₂ per capita: 0.41<br>Population:    12,726,760","Tunisia<br>GDP per capita: $  3,529<br>CO₂ per capita: 2.58<br>Population:    11,875,084","Bulgaria<br>GDP per capita: $  9,821<br>CO₂ per capita: 6.05<br>Population:     6,975,466","Slovenia<br>GDP per capita: $ 25,875<br>CO₂ per capita: 6.74<br>Population:     2,083,438","Latvia<br>GDP per capita: $ 17,291<br>CO₂ per capita: 3.99<br>Population:     1,914,267","Cyprus<br>GDP per capita: $ 20,360<br>CO₂ per capita: 5.69<br>Population:     1,286,669","Bhutan<br>GDP per capita: $  3,577<br>CO₂ per capita: 2.05<br>Population:       764,830","Luxembourg<br>GDP per capita: $112,666<br>CO₂ per capita: 15.72<br>Population:       620,167","Montenegro<br>GDP per capita: $  8,965<br>CO₂ per capita: 4.05<br>Population:       611,671","Maldives<br>GDP per capita: $ 11,740<br>CO₂ per capita: 4.09<br>Population:       487,737"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(0,0,4,1)","opacity":0.65000000000000002,"size":[16.769547589692309,14.228406412002192,13.887435609307513,13.572740953419217,13.188421227898342,12.999256881747035,11.773674752739481,11.765204669957377,11.61621957497437,10.621425283132247,9.0778079241091056,8.995046354176381,8.6337031384302065,8.1919391118176588,7.99658178117018,7.9823144754312052,7.559055118110237],"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(0,0,4,1)"}},"hoveron":"points","name":"Low","legendgroup":"Low","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[3.3283385994088661,3.5315797429325779,3.5366720743560727,3.8151599712132409,3.2923464687586166,3.8110750912647711,3.9980837494739854,3.5343890989083531,4.0382303427839945,3.7927459211560661,4.3657653676158246,4.6653123680576529,4.6857565958220606,4.9166658313591469],"y":[-0.24033215531036956,0.10957854690438666,0.54307423503353214,0.89762709129044149,-0.44977164694490596,0.29732271420530271,0.60336092434838051,0.69390274106606065,0.9192350379232509,0.36398782974849142,0.66275783168157409,1.3376588910261422,0.74795530690672984,0.87737134586977406],"text":["Bangladesh<br>GDP per capita: $  2,130<br>CO₂ per capita: 0.58<br>Population:   164,913,060","Philippines<br>GDP per capita: $  3,401<br>CO₂ per capita: 1.29<br>Population:   110,804,685","Vietnam<br>GDP per capita: $  3,441<br>CO₂ per capita: 3.49<br>Population:    97,173,778","South Africa<br>GDP per capita: $  6,534<br>CO₂ per capita: 7.9<br>Population:    59,587,880","Kenya<br>GDP per capita: $  1,960<br>CO₂ per capita: 0.36<br>Population:    51,202,829","Colombia<br>GDP per capita: $  6,473<br>CO₂ per capita: 1.98<br>Population:    49,907,987","Argentina<br>GDP per capita: $  9,956<br>CO₂ per capita: 4.01<br>Population:    44,973,469","Ukraine<br>GDP per capita: $  3,423<br>CO₂ per capita: 4.94<br>Population:    44,957,451","Malaysia<br>GDP per capita: $ 10,920<br>CO₂ per capita: 8.3<br>Population:    33,440,590","ECUADOR<br>GDP per capita: $  6,205<br>CO₂ per capita: 2.31<br>Population:    17,340,017","Portugal<br>GDP per capita: $ 23,215<br>CO₂ per capita: 4.6<br>Population:    10,343,218","United Arab Emirates<br>GDP per capita: $ 46,271<br>CO₂ per capita: 21.76<br>Population:     9,377,855","Hong Kong<br>GDP per capita: $ 48,502<br>CO₂ per capita: 5.6<br>Population:     7,485,817","Ireland<br>GDP per capita: $ 82,540<br>CO₂ per capita: 7.54<br>Population:     4,933,493"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(100,26,128,1)","opacity":0.65000000000000002,"size":[22.975906525809375,20.186993493434748,19.381116869294861,16.801898638707147,16.121148173317621,16.011139101635553,15.578082663946601,15.576638826313831,14.460783208198245,12.49466321340684,11.333475313123946,11.143856492940941,10.739594563995134,10.094091207124354],"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(100,26,128,1)"}},"hoveron":"points","name":"Lower-Mid","legendgroup":"Lower-Mid","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[3.5037652135791628,3.958536972809334,3.8811390381614594,4.7240025602373521,4.9247955504235801],"y":[-0.21467016498923297,0.67788058151159047,0.59560643486560305,0.93996829055133613,0.63276088847943879],"text":["NIGERIA<br>GDP per capita: $  3,190<br>CO₂ per capita: 0.61<br>Population:   209,485,637","Turkey<br>GDP per capita: $  9,089<br>CO₂ per capita: 4.76<br>Population:    85,357,670","Thailand<br>GDP per capita: $  7,606<br>CO₂ per capita: 3.94<br>Population:    71,522,264","Netherlands<br>GDP per capita: $ 52,967<br>CO₂ per capita: 8.71<br>Population:    17,537,505","Switzerland<br>GDP per capita: $ 84,100<br>CO₂ per capita: 4.29<br>Population:     8,577,525"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(222,73,104,1)","opacity":0.65000000000000002,"size":[24.940356734428775,18.635190728807448,17.692242676176054,12.523498609638541,10.978691312083175],"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(222,73,104,1)"}},"hoveron":"points","name":"Upper-Mid","legendgroup":"Upper-Mid","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[4.0098026770922566,3.3099342042867006,4.8013806512404944,3.6135192634692794,3.9556797205532472,4.6063251297224008,4.0157601482659731,4.6756894575887449,4.6319516613667497,4.6172546432312433,4.526174637440338,4.4711112864470843,4.6641823602290877,4.7393700833974171],"y":[0.87656421398384554,0.27415784926367981,1.1903316981702914,0.38756777941718856,0.36135002435226637,0.93941940332931717,0.57089303621839227,0.92844706320918202,0.73519954842231328,0.68232561866780717,0.75189468804374737,0.72304499164344505,1.1854004831904525,1.2117344228760272],"text":["China<br>GDP per capita: $ 10,228<br>CO₂ per capita: 7.53<br>Population: 1,423,520,357","India<br>GDP per capita: $  2,041<br>CO₂ per capita: 1.88<br>Population: 1,389,030,307","United States of America<br>GDP per capita: $ 63,297<br>CO₂ per capita: 15.5<br>Population:   337,790,069","Indonesia<br>GDP per capita: $  4,107<br>CO₂ per capita: 2.44<br>Population:   272,489,381","Brazil<br>GDP per capita: $  9,030<br>CO₂ per capita: 2.3<br>Population:   207,455,459","Japan<br>GDP per capita: $ 40,395<br>CO₂ per capita: 8.7<br>Population:   126,699,421","Mexico<br>GDP per capita: $ 10,370<br>CO₂ per capita: 3.72<br>Population:   125,762,978","Germany<br>GDP per capita: $ 47,390<br>CO₂ per capita: 8.48<br>Population:    83,559,184","United Kingdom<br>GDP per capita: $ 42,850<br>CO₂ per capita: 5.43<br>Population:    67,110,958","France<br>GDP per capita: $ 41,424<br>CO₂ per capita: 4.81<br>Population:    65,729,460","Italy<br>GDP per capita: $ 33,587<br>CO₂ per capita: 5.65<br>Population:    60,130,136","Spain<br>GDP per capita: $ 29,588<br>CO₂ per capita: 5.28<br>Population:    47,435,121","Canada<br>GDP per capita: $ 46,151<br>CO₂ per capita: 15.32<br>Population:    37,782,934","Australia<br>GDP per capita: $ 54,874<br>CO₂ per capita: 16.28<br>Population:    25,482,714"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(254,206,145,1)","opacity":0.65000000000000002,"size":[52.913385826771659,52.36038793018129,29.640170475383222,27.387885564985787,24.85573088758893,21.066124024921027,21.015922058153311,18.517204650603059,17.372560104288414,17.270280773256733,16.844204317160326,15.796964939106845,14.901450843072633,13.569930240285327],"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(254,206,145,1)"}},"hoveron":"points","name":"High","legendgroup":"High","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":79.76089663760898,"r":39.850560398505614,"b":70.900788709007898,"l":86.176836861768393},"plot_bgcolor":"rgba(37,42,50,1)","paper_bgcolor":"rgba(37,42,50,1)","font":{"color":"rgba(146,146,153,1)","family":"Roboto Condensed","size":15.276048152760483},"title":{"text":"<b> Bubble Plot of GDP and CO2 Emissions Per Capita <\/b>","font":{"color":"rgba(255,255,255,1)","family":"Roboto Condensed","size":23.910336239103366},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[2.7751670955580829,5.1602055799620752],"tickmode":"array","ticktext":["$1,000","$10,000","$100,000"],"tickvals":[3,4,5],"categoryorder":"array","categoryarray":["$1,000","$10,000","$100,000"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.8190120381901207,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(146,146,153,1)","family":"Roboto Condensed","size":15.276048152760483},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(70,73,80,1)","gridwidth":0.265670402656704,"zeroline":false,"anchor":"y","title":{"text":"GDP Per Capita","font":{"color":"rgba(146,146,153,1)","family":"Roboto Condensed","size":11.955168119551683}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-1.0692938168253168,1.4522756866381163],"tickmode":"array","ticktext":["0.1","1.0","10.0"],"tickvals":[-1,0,1],"categoryorder":"array","categoryarray":["0.1","1.0","10.0"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.8190120381901207,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(146,146,153,1)","family":"Roboto Condensed","size":15.276048152760483},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(70,73,80,1)","gridwidth":0.26567040265670405,"zeroline":false,"anchor":"x","title":{"text":"CO2 Emissions Per Capita","font":{"color":"rgba(146,146,153,1)","family":"Roboto Condensed","size":11.955168119551683}},"hoverformat":".2f"},"shapes":[],"showlegend":true,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(146,146,153,1)","family":"Roboto Condensed","size":12.220838522208389},"title":{"text":"Population<br />GDP Level","font":{"color":"rgba(146,146,153,1)","family":"Roboto Condensed","size":15.276048152760483}}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"65d86141785":{"x":{},"y":{},"size":{},"colour":{},"text":{},"type":"scatter"}},"cur_data":"65d86141785","visdat":{"65d86141785":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div class="plotly html-widget html-fill-item html-fill-container" id="htmlwidget-eeb344c5b18f1a03830e" style="width:100%;height:406px;"></div>
+<script type="application/json" data-for="htmlwidget-eeb344c5b18f1a03830e">{"x":{"data":[{"x":[3.0133826614967414,3.3397809362005533,3.3307724218388692,3.19179367698273,3.598931139812735,2.8835779357582645,2.9085126174380211,3.053393830092781,3.547635812484109,3.9921663598097581,4.4128881283610486,4.2378189726100528,4.3087792036977692,3.553500947674606,5.0517947397618936,3.9525381263639323,4.0696728311222117],"y":[-0.56224943717961195,-0.27984069659404309,-0.42712839779951983,-0.42365864979420714,-0.025949097207122653,-0.57186520597121115,-0.95467702121334252,-0.38299965887910109,0.41077723337720984,0.78168358450735076,0.82898195400792307,0.60075514963961807,0.75534118381154758,0.3109056293761413,1.1965077919396958,0.60734777676841345,0.61140463771159348],"text":["Tanzania<br>GDP per capita: $  1,031<br>CO₂ per capita: 0.27<br>Population:    59,174,889","Ghana<br>GDP per capita: $  2,187<br>CO₂ per capita: 0.52<br>Population:    31,258,943","Cote D_ivoire<br>GDP per capita: $  2,142<br>CO₂ per capita: 0.37<br>Population:    28,193,014","Cameroon<br>GDP per capita: $  1,555<br>CO₂ per capita: 0.38<br>Population:    25,506,095","Sri Lanka<br>GDP per capita: $  3,971<br>CO₂ per capita: 0.94<br>Population:    22,410,552","Burkina Faso<br>GDP per capita: $    765<br>CO₂ per capita: 0.27<br>Population:    20,961,956","Rwanda<br>GDP per capita: $    810<br>CO₂ per capita: 0.11<br>Population:    12,776,102","Benin<br>GDP per capita: $  1,131<br>CO₂ per capita: 0.41<br>Population:    12,726,760","Tunisia<br>GDP per capita: $  3,529<br>CO₂ per capita: 2.58<br>Population:    11,875,084","Bulgaria<br>GDP per capita: $  9,821<br>CO₂ per capita: 6.05<br>Population:     6,975,466","Slovenia<br>GDP per capita: $ 25,875<br>CO₂ per capita: 6.74<br>Population:     2,083,438","Latvia<br>GDP per capita: $ 17,291<br>CO₂ per capita: 3.99<br>Population:     1,914,267","Cyprus<br>GDP per capita: $ 20,360<br>CO₂ per capita: 5.69<br>Population:     1,286,669","Bhutan<br>GDP per capita: $  3,577<br>CO₂ per capita: 2.05<br>Population:       764,830","Luxembourg<br>GDP per capita: $112,666<br>CO₂ per capita: 15.72<br>Population:       620,167","Montenegro<br>GDP per capita: $  8,965<br>CO₂ per capita: 4.05<br>Population:       611,671","Maldives<br>GDP per capita: $ 11,740<br>CO₂ per capita: 4.09<br>Population:       487,737"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(0,0,4,1)","opacity":0.65000000000000002,"size":[16.769547589692309,14.228406412002192,13.887435609307513,13.572740953419217,13.188421227898342,12.999256881747035,11.773674752739481,11.765204669957377,11.61621957497437,10.621425283132247,9.0778079241091056,8.995046354176381,8.6337031384302065,8.1919391118176588,7.99658178117018,7.9823144754312052,7.559055118110237],"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(0,0,4,1)"}},"hoveron":"points","name":"Low","legendgroup":"Low","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[3.3283385994088661,3.5315797429325779,3.5366720743560727,3.8151599712132409,3.2923464687586166,3.8110750912647711,3.9980837494739854,3.5343890989083531,4.0382303427839945,3.7927459211560661,4.3657653676158246,4.6653123680576529,4.6857565958220606,4.9166658313591469],"y":[-0.24033215531036956,0.10957854690438666,0.54307423503353214,0.89762709129044149,-0.44977164694490596,0.29732271420530271,0.60336092434838051,0.69390274106606065,0.9192350379232509,0.36398782974849142,0.66275783168157409,1.3376588910261422,0.74795530690672984,0.87737134586977406],"text":["Bangladesh<br>GDP per capita: $  2,130<br>CO₂ per capita: 0.58<br>Population:   164,913,060","Philippines<br>GDP per capita: $  3,401<br>CO₂ per capita: 1.29<br>Population:   110,804,685","Vietnam<br>GDP per capita: $  3,441<br>CO₂ per capita: 3.49<br>Population:    97,173,778","South Africa<br>GDP per capita: $  6,534<br>CO₂ per capita: 7.9<br>Population:    59,587,880","Kenya<br>GDP per capita: $  1,960<br>CO₂ per capita: 0.36<br>Population:    51,202,829","Colombia<br>GDP per capita: $  6,473<br>CO₂ per capita: 1.98<br>Population:    49,907,987","Argentina<br>GDP per capita: $  9,956<br>CO₂ per capita: 4.01<br>Population:    44,973,469","Ukraine<br>GDP per capita: $  3,423<br>CO₂ per capita: 4.94<br>Population:    44,957,451","Malaysia<br>GDP per capita: $ 10,920<br>CO₂ per capita: 8.3<br>Population:    33,440,590","ECUADOR<br>GDP per capita: $  6,205<br>CO₂ per capita: 2.31<br>Population:    17,340,017","Portugal<br>GDP per capita: $ 23,215<br>CO₂ per capita: 4.6<br>Population:    10,343,218","United Arab Emirates<br>GDP per capita: $ 46,271<br>CO₂ per capita: 21.76<br>Population:     9,377,855","Hong Kong<br>GDP per capita: $ 48,502<br>CO₂ per capita: 5.6<br>Population:     7,485,817","Ireland<br>GDP per capita: $ 82,540<br>CO₂ per capita: 7.54<br>Population:     4,933,493"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(100,26,128,1)","opacity":0.65000000000000002,"size":[22.975906525809375,20.186993493434748,19.381116869294861,16.801898638707147,16.121148173317621,16.011139101635553,15.578082663946601,15.576638826313831,14.460783208198245,12.49466321340684,11.333475313123946,11.143856492940941,10.739594563995134,10.094091207124354],"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(100,26,128,1)"}},"hoveron":"points","name":"Lower-Mid","legendgroup":"Lower-Mid","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[3.5037652135791628,3.958536972809334,3.8811390381614594,4.7240025602373521,4.9247955504235801],"y":[-0.21467016498923297,0.67788058151159047,0.59560643486560305,0.93996829055133613,0.63276088847943879],"text":["NIGERIA<br>GDP per capita: $  3,190<br>CO₂ per capita: 0.61<br>Population:   209,485,637","Turkey<br>GDP per capita: $  9,089<br>CO₂ per capita: 4.76<br>Population:    85,357,670","Thailand<br>GDP per capita: $  7,606<br>CO₂ per capita: 3.94<br>Population:    71,522,264","Netherlands<br>GDP per capita: $ 52,967<br>CO₂ per capita: 8.71<br>Population:    17,537,505","Switzerland<br>GDP per capita: $ 84,100<br>CO₂ per capita: 4.29<br>Population:     8,577,525"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(222,73,104,1)","opacity":0.65000000000000002,"size":[24.940356734428775,18.635190728807448,17.692242676176054,12.523498609638541,10.978691312083175],"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(222,73,104,1)"}},"hoveron":"points","name":"Upper-Mid","legendgroup":"Upper-Mid","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[4.0098026770922566,3.3099342042867006,4.8013806512404944,3.6135192634692794,3.9556797205532472,4.6063251297224008,4.0157601482659731,4.6756894575887449,4.6319516613667497,4.6172546432312433,4.526174637440338,4.4711112864470843,4.6641823602290877,4.7393700833974171],"y":[0.87656421398384554,0.27415784926367981,1.1903316981702914,0.38756777941718856,0.36135002435226637,0.93941940332931717,0.57089303621839227,0.92844706320918202,0.73519954842231328,0.68232561866780717,0.75189468804374737,0.72304499164344505,1.1854004831904525,1.2117344228760272],"text":["China<br>GDP per capita: $ 10,228<br>CO₂ per capita: 7.53<br>Population: 1,423,520,357","India<br>GDP per capita: $  2,041<br>CO₂ per capita: 1.88<br>Population: 1,389,030,307","United States of America<br>GDP per capita: $ 63,297<br>CO₂ per capita: 15.5<br>Population:   337,790,069","Indonesia<br>GDP per capita: $  4,107<br>CO₂ per capita: 2.44<br>Population:   272,489,381","Brazil<br>GDP per capita: $  9,030<br>CO₂ per capita: 2.3<br>Population:   207,455,459","Japan<br>GDP per capita: $ 40,395<br>CO₂ per capita: 8.7<br>Population:   126,699,421","Mexico<br>GDP per capita: $ 10,370<br>CO₂ per capita: 3.72<br>Population:   125,762,978","Germany<br>GDP per capita: $ 47,390<br>CO₂ per capita: 8.48<br>Population:    83,559,184","United Kingdom<br>GDP per capita: $ 42,850<br>CO₂ per capita: 5.43<br>Population:    67,110,958","France<br>GDP per capita: $ 41,424<br>CO₂ per capita: 4.81<br>Population:    65,729,460","Italy<br>GDP per capita: $ 33,587<br>CO₂ per capita: 5.65<br>Population:    60,130,136","Spain<br>GDP per capita: $ 29,588<br>CO₂ per capita: 5.28<br>Population:    47,435,121","Canada<br>GDP per capita: $ 46,151<br>CO₂ per capita: 15.32<br>Population:    37,782,934","Australia<br>GDP per capita: $ 54,874<br>CO₂ per capita: 16.28<br>Population:    25,482,714"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(254,206,145,1)","opacity":0.65000000000000002,"size":[52.913385826771659,52.36038793018129,29.640170475383222,27.387885564985787,24.85573088758893,21.066124024921027,21.015922058153311,18.517204650603059,17.372560104288414,17.270280773256733,16.844204317160326,15.796964939106845,14.901450843072633,13.569930240285327],"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(254,206,145,1)"}},"hoveron":"points","name":"High","legendgroup":"High","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":79.76089663760898,"r":39.850560398505614,"b":70.900788709007898,"l":86.176836861768393},"plot_bgcolor":"rgba(37,42,50,1)","paper_bgcolor":"rgba(37,42,50,1)","font":{"color":"rgba(146,146,153,1)","family":"Roboto Condensed","size":15.276048152760483},"title":{"text":"<b> Bubble Plot of GDP and CO2 Emissions Per Capita <\/b>","font":{"color":"rgba(255,255,255,1)","family":"Roboto Condensed","size":23.910336239103362},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[2.7751670955580829,5.1602055799620752],"tickmode":"array","ticktext":["$1,000","$10,000","$100,000"],"tickvals":[3,4,5],"categoryorder":"array","categoryarray":["$1,000","$10,000","$100,000"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.8190120381901207,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(146,146,153,1)","family":"Roboto Condensed","size":15.276048152760483},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(70,73,80,1)","gridwidth":0.26567040265670405,"zeroline":false,"anchor":"y","title":{"text":"GDP Per Capita","font":{"color":"rgba(146,146,153,1)","family":"Roboto Condensed","size":11.955168119551681}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-1.0692938168253168,1.4522756866381163],"tickmode":"array","ticktext":["0.1","1.0","10.0"],"tickvals":[-1,0,1],"categoryorder":"array","categoryarray":["0.1","1.0","10.0"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.8190120381901207,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(146,146,153,1)","family":"Roboto Condensed","size":15.276048152760483},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(70,73,80,1)","gridwidth":0.26567040265670405,"zeroline":false,"anchor":"x","title":{"text":"CO2 Emissions Per Capita","font":{"color":"rgba(146,146,153,1)","family":"Roboto Condensed","size":11.955168119551681}},"hoverformat":".2f"},"shapes":[],"showlegend":true,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(146,146,153,1)","family":"Roboto Condensed","size":12.220838522208387},"title":{"text":"Population<br />GDP Level","font":{"color":"rgba(146,146,153,1)","family":"Roboto Condensed","size":15.276048152760483}}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"361ed2295e9":{"x":{},"y":{},"size":{},"colour":{},"text":{},"type":"scatter"}},"cur_data":"361ed2295e9","visdat":{"361ed2295e9":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rq2-bubble-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1: GDP per capita and CO2 emissions per capita across countries in 2019, with bubble size representing population.
@@ -1336,11 +1345,52 @@ Figure&nbsp;2: Relationship between GDP per capita and CO2 waste per capita acro
 </div>
 </div>
 </div>
-<div id="mystery-country-luxemborg-would-be-a-good-one" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-orientation="rows" aria-labelledby="tab-mystery-country-luxemborg-would-be-a-good-one">
-<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, max-content); grid-auto-columns: minmax(0, 1fr);">
-<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: ;
+<div id="inside-look-at-luxemborg" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-orientation="rows" aria-labelledby="tab-inside-look-at-luxemborg">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, max-content) minmax(3em, 1fr) minmax(3em, 1fr); grid-auto-columns: minmax(0, 1fr);">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr);
 grid-auto-rows: minmax(0, 1fr);">
-<div id="3ade8a4a-fb1d-4a6c-8409-ac45482d5fc9" class="hidden html-fill-item html-fill-container">
+<div class="card html-fill-item html-fill-container bslib-card" data-fill="false" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<p>A country we found very interesting in this data was Luxembourg. We found it fascinating that the GDP per capita was the largest in our dataset (by a considerable margin) and it was also third in CO2 emissions per capita. Yet despite this the whole country has a population that hardly exceeds 600,000 people.</p>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card cell html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output-display html-fill-item html-fill-container">
+<div class="leaflet html-widget html-fill-item html-fill-container" id="htmlwidget-4a629b7cbfc297843e1b" style="width:100%;height:406px;"></div>
+<script type="application/json" data-for="htmlwidget-4a629b7cbfc297843e1b">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addProviderTiles","args":["CartoDB.Positron",null,null,{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addCircleMarkers","args":[49.8153,6.1296,12,null,null,{"interactive":true,"className":"","stroke":true,"color":"#e63946","weight":5,"opacity":0.5,"fill":true,"fillColor":"#e63946","fillOpacity":0.8},null,null,"<b>Luxembourg (2019)<\/b><br>Population: 620,167<br>GDP per Capita: $112,666<br>CO₂ per Capita: 15.72 tonnes<br>Plastic Waste per Capita: 1.61 kg",null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"setView":[[50,7.5],6,[]],"limits":{"lat":[49.8153,49.8153],"lng":[6.1296,6.1296]}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card cell html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output-display html-fill-item html-fill-container">
+<div class="plotly html-widget html-fill-item html-fill-container" id="htmlwidget-26e00701a4aecf4450f1" style="width:100%;height:406px;"></div>
+<script type="application/json" data-for="htmlwidget-26e00701a4aecf4450f1">{"x":{"visdat":{"361e64aa3435":["function () ","plotlyVisDat"],"361e6249b734":["function () ","data"],"361e559ae955":["function () ","data"],"361e2d4cf75b":["function () ","data"]},"cur_data":"361e2d4cf75b","attrs":{"361e6249b734":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"x":{},"y":{},"type":"scatter","mode":"markers","name":"No plastic data","text":{},"hoverinfo":"text","marker":{"size":6,"color":"rgba(180,180,180,0.4)","line":{"color":"rgba(150,150,150,0.3)","width":0.5}},"inherit":true},"361e559ae955":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"x":{},"y":{},"size":{},"type":"scatter","mode":"markers","name":"Plastic data available","text":{},"hoverinfo":"text","marker":{"sizemode":"area","sizeref":0.29999999999999999,"opacity":0.59999999999999998,"color":"rgba(49, 130, 189, 0.6)","line":{"color":"rgba(49,130,189,0.8)","width":1}},"inherit":true},"361e2d4cf75b":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"x":{},"y":{},"size":{},"type":"scatter","mode":"markers+text","name":"Luxembourg","text":{},"textposition":"top right","hoverinfo":"text","marker":{"sizemode":"area","sizeref":0.29999999999999999,"opacity":0.94999999999999996,"color":"rgba(214, 39, 40, 0.85)","line":{"color":"darkred","width":2}},"inherit":true}},"layout":{"margin":{"b":90,"l":60,"t":25,"r":10},"title":{"text":"CO₂ per Capita vs. GDP per Capita (2019) — Bubble Size: Plastic Waste Pieces Collected","font":{"size":12}},"xaxis":{"domain":[0,1],"automargin":true,"title":"GDP per Capita (USD)","tickformat":"$,"},"yaxis":{"domain":[0,1],"automargin":true,"title":"CO₂ per Capita (tonnes)"},"legend":{"orientation":"h","y":-0.14999999999999999},"annotations":[{"x":0.01,"y":-0.20000000000000001,"xref":"paper","yref":"paper","text":"Bubble size reflects plastic pieces collected in cleanup events (2019) — not national plastic production.","showarrow":false,"font":{"size":9,"color":"gray50"},"xanchor":"left"}],"hovermode":"closest","showlegend":true},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":[1930.6176198171365,11538.86325702051,13625.38912060781,4985.5063691882106,12379.2705977152,43728.194610419065,16384.311946422342,38779.329897184783,12572.495697257624,19251.243290729661,41155.121776425876,6701.6538250041594,13001.556631052998,15508.20506440168,699.56281674460411,3769.6925562629899,8149.7061305230727,740.77808436817702,1457.2267472241756,21738.589680831315,1949.1559494115045,4308.0212067465054,14930.420070490358,3710.7827317079332,23344.227881328679,8185.7081864993779,32408.670936322109,853.09457396625726,48267.377998520278,2835.0921246245557,10528.127685895643,15966.895501238612,10191.955553157763,11987.127831791533,9063.1276404155615,12344.598017344197,28431.225175645264,7778.5860189764253,1917.1445216525717,39873.904481076119,15513.810919909989,1706.4913916088385,16379.581317515478,23558.552266573344,7748.8799722494468,1577.4727476608152,1471.9431479531474,1692.8584413648964,4694.9137695794807,27292.61700066712,43111.611495693207,16527.595706130734,13049.767444722263,34282.464572428005,7235.9652793298565,9001.4814127165628,25052.407224976985,49346.630603612939,4812.6240715327112,6803.7839453081015,11825.741081051137,2261.3299512902518,785.00129527437991,16666.744790419853,28107.70621207367,1336.826344309633,1307.776832584979,1373.9372526776469,33247.505933331617,3228.674903541274,21918.733555733677,7759.157118848434,13607.12730166411,8495.3677099002234,999.2068574758357,6402.6015537060111,8412.4410652484676,3124.3602822278235,37534.399454043662,4493.3841925702454,925.47169927005962,5152.7489367588478,1632.2182709541992,14983.468894834275,85139.783745747962,37177.77468239572,5079.4003471554797,4923.6569276164919,21175.139268254785,9670.542294244764,10146.677755872839,29331.734933088796,133605.13383444241,23411.713170579023,25284.638890678209,10266.14689179682,3678.4225486750543,55366.739364953195,2821.0045327056455,15390.029231333498,26661.724167530723,1426.7551405239062,75105.671999000988,27259.096545590077,38933.853138349747,45433.915100319871,3067.1376606010867,46713.946373884719,4300.0961434296223,1486.4206966266379,26978.905593515516,13863.976670733426,2160.5724504737668,54887.796894102888,19775.219597810672,10314.031220093009,6813.5403053469727,15637.533942842085,1884.9997203473652,3515.9912832233226,1646.6371175958789],"y":[0.27500000000000002,1.712,4.2140000000000004,0.68600000000000005,2.1640000000000001,7.6509999999999998,3.734,25.318999999999999,4.9500000000000002,6.5890000000000004,8.6850000000000005,1.9370000000000001,6.2199999999999998,3.21,0.056000000000000001,1.1299999999999999,1.226,0.063,0.13800000000000001,4.7910000000000004,0.39600000000000002,1.2989999999999999,1.532,0.374,4.4699999999999998,2.0070000000000001,9.5690000000000008,0.043999999999999997,5.3230000000000004,0.496,2.536,2.613,2.3119999999999998,2.1760000000000002,1.2270000000000001,3.3010000000000002,9.2609999999999992,0.93200000000000005,0.14799999999999999,7.6870000000000003,2.4729999999999999,0.28899999999999998,2.77,6.133,1.1259999999999999,0.315,0.13,0.28100000000000003,1.1020000000000001,5.0309999999999997,9.8490000000000002,8.3539999999999992,4.6559999999999997,6.8090000000000002,3.343,2.302,15.411,23.559000000000001,1.393,2.5339999999999998,4.3390000000000004,0.98999999999999999,0.185,10.614000000000001,4.883,0.14699999999999999,0.088999999999999996,0.26600000000000001,3.2719999999999998,1.0329999999999999,3.5179999999999998,1.728,14.577999999999999,1.8979999999999999,0.23699999999999999,0.63900000000000001,1.407,0.44900000000000001,7.3579999999999997,0.80300000000000005,0.11,0.60999999999999999,2.6699999999999999,4.0179999999999998,8.016,15.69,0.82699999999999996,0.65800000000000003,2.9399999999999999,1.2689999999999999,1.8080000000000001,8.3040000000000003,36.252000000000002,3.9329999999999998,11.632,2.8250000000000002,0.68700000000000006,23.245000000000001,0.77700000000000002,6.3799999999999999,5.0140000000000002,0.14499999999999999,8.6430000000000007,6.2110000000000003,12.481,3.9670000000000001,1.645,11.603999999999999,0.91400000000000003,0.27900000000000003,27.446000000000002,9.1500000000000004,0.13400000000000001,15.5,1.8859999999999999,3.2749999999999999,3.6429999999999998,4.7480000000000002,0.33600000000000002,0.47799999999999998,0.67200000000000004],"type":"scatter","mode":"markers","name":"No plastic data","text":["<b>Afghanistan<\/b><br>GDP/capita: $1,931<br>CO₂/capita: 0.3 t","<b>Albania<\/b><br>GDP/capita: $11,539<br>CO₂/capita: 1.7 t","<b>Algeria<\/b><br>GDP/capita: $13,625<br>CO₂/capita: 4.2 t","<b>Angola<\/b><br>GDP/capita: $4,986<br>CO₂/capita: 0.7 t","<b>Armenia<\/b><br>GDP/capita: $12,379<br>CO₂/capita: 2.2 t","<b>Austria<\/b><br>GDP/capita: $43,728<br>CO₂/capita: 7.7 t","<b>Azerbaijan<\/b><br>GDP/capita: $16,384<br>CO₂/capita: 3.7 t","<b>Bahrain<\/b><br>GDP/capita: $38,779<br>CO₂/capita: 25.3 t","<b>Barbados<\/b><br>GDP/capita: $12,572<br>CO₂/capita: 5 t","<b>Belarus<\/b><br>GDP/capita: $19,251<br>CO₂/capita: 6.6 t","<b>Belgium<\/b><br>GDP/capita: $41,155<br>CO₂/capita: 8.7 t","<b>Bolivia<\/b><br>GDP/capita: $6,702<br>CO₂/capita: 1.9 t","<b>Bosnia and Herzegovina<\/b><br>GDP/capita: $13,002<br>CO₂/capita: 6.2 t","<b>Botswana<\/b><br>GDP/capita: $15,508<br>CO₂/capita: 3.2 t","<b>Burundi<\/b><br>GDP/capita: $700<br>CO₂/capita: 0.1 t","<b>Cambodia<\/b><br>GDP/capita: $3,770<br>CO₂/capita: 1.1 t","<b>Cape Verde<\/b><br>GDP/capita: $8,150<br>CO₂/capita: 1.2 t","<b>Central African Republic<\/b><br>GDP/capita: $741<br>CO₂/capita: 0.1 t","<b>Chad<\/b><br>GDP/capita: $1,457<br>CO₂/capita: 0.1 t","<b>Chile<\/b><br>GDP/capita: $21,739<br>CO₂/capita: 4.8 t","<b>Comoros<\/b><br>GDP/capita: $1,949<br>CO₂/capita: 0.4 t","<b>Congo<\/b><br>GDP/capita: $4,308<br>CO₂/capita: 1.3 t","<b>Costa Rica<\/b><br>GDP/capita: $14,930<br>CO₂/capita: 1.5 t","<b>Cote d'Ivoire<\/b><br>GDP/capita: $3,711<br>CO₂/capita: 0.4 t","<b>Croatia<\/b><br>GDP/capita: $23,344<br>CO₂/capita: 4.5 t","<b>Cuba<\/b><br>GDP/capita: $8,186<br>CO₂/capita: 2 t","<b>Czechia<\/b><br>GDP/capita: $32,409<br>CO₂/capita: 9.6 t","<b>Democratic Republic of Congo<\/b><br>GDP/capita: $853<br>CO₂/capita: 0 t","<b>Denmark<\/b><br>GDP/capita: $48,267<br>CO₂/capita: 5.3 t","<b>Djibouti<\/b><br>GDP/capita: $2,835<br>CO₂/capita: 0.5 t","<b>Dominica<\/b><br>GDP/capita: $10,528<br>CO₂/capita: 2.5 t","<b>Dominican Republic<\/b><br>GDP/capita: $15,967<br>CO₂/capita: 2.6 t","<b>Ecuador<\/b><br>GDP/capita: $10,192<br>CO₂/capita: 2.3 t","<b>Egypt<\/b><br>GDP/capita: $11,987<br>CO₂/capita: 2.2 t","<b>El Salvador<\/b><br>GDP/capita: $9,063<br>CO₂/capita: 1.2 t","<b>Equatorial Guinea<\/b><br>GDP/capita: $12,345<br>CO₂/capita: 3.3 t","<b>Estonia<\/b><br>GDP/capita: $28,431<br>CO₂/capita: 9.3 t","<b>Eswatini<\/b><br>GDP/capita: $7,779<br>CO₂/capita: 0.9 t","<b>Ethiopia<\/b><br>GDP/capita: $1,917<br>CO₂/capita: 0.1 t","<b>Finland<\/b><br>GDP/capita: $39,874<br>CO₂/capita: 7.7 t","<b>Gabon<\/b><br>GDP/capita: $15,514<br>CO₂/capita: 2.5 t","<b>Gambia<\/b><br>GDP/capita: $1,706<br>CO₂/capita: 0.3 t","<b>Georgia<\/b><br>GDP/capita: $16,380<br>CO₂/capita: 2.8 t","<b>Greece<\/b><br>GDP/capita: $23,559<br>CO₂/capita: 6.1 t","<b>Guatemala<\/b><br>GDP/capita: $7,749<br>CO₂/capita: 1.1 t","<b>Guinea<\/b><br>GDP/capita: $1,577<br>CO₂/capita: 0.3 t","<b>Guinea-Bissau<\/b><br>GDP/capita: $1,472<br>CO₂/capita: 0.1 t","<b>Haiti<\/b><br>GDP/capita: $1,693<br>CO₂/capita: 0.3 t","<b>Honduras<\/b><br>GDP/capita: $4,695<br>CO₂/capita: 1.1 t","<b>Hungary<\/b><br>GDP/capita: $27,293<br>CO₂/capita: 5 t","<b>Iceland<\/b><br>GDP/capita: $43,112<br>CO₂/capita: 9.8 t","<b>Iran<\/b><br>GDP/capita: $16,528<br>CO₂/capita: 8.4 t","<b>Iraq<\/b><br>GDP/capita: $13,050<br>CO₂/capita: 4.7 t","<b>Israel<\/b><br>GDP/capita: $34,282<br>CO₂/capita: 6.8 t","<b>Jamaica<\/b><br>GDP/capita: $7,236<br>CO₂/capita: 3.3 t","<b>Jordan<\/b><br>GDP/capita: $9,001<br>CO₂/capita: 2.3 t","<b>Kazakhstan<\/b><br>GDP/capita: $25,052<br>CO₂/capita: 15.4 t","<b>Kuwait<\/b><br>GDP/capita: $49,347<br>CO₂/capita: 23.6 t","<b>Kyrgyzstan<\/b><br>GDP/capita: $4,813<br>CO₂/capita: 1.4 t","<b>Laos<\/b><br>GDP/capita: $6,804<br>CO₂/capita: 2.5 t","<b>Lebanon<\/b><br>GDP/capita: $11,826<br>CO₂/capita: 4.3 t","<b>Lesotho<\/b><br>GDP/capita: $2,261<br>CO₂/capita: 1 t","<b>Liberia<\/b><br>GDP/capita: $785<br>CO₂/capita: 0.2 t","<b>Libya<\/b><br>GDP/capita: $16,667<br>CO₂/capita: 10.6 t","<b>Lithuania<\/b><br>GDP/capita: $28,108<br>CO₂/capita: 4.9 t","<b>Madagascar<\/b><br>GDP/capita: $1,337<br>CO₂/capita: 0.1 t","<b>Malawi<\/b><br>GDP/capita: $1,308<br>CO₂/capita: 0.1 t","<b>Mali<\/b><br>GDP/capita: $1,374<br>CO₂/capita: 0.3 t","<b>Malta<\/b><br>GDP/capita: $33,248<br>CO₂/capita: 3.3 t","<b>Mauritania<\/b><br>GDP/capita: $3,229<br>CO₂/capita: 1 t","<b>Mauritius<\/b><br>GDP/capita: $21,919<br>CO₂/capita: 3.5 t","<b>Moldova<\/b><br>GDP/capita: $7,759<br>CO₂/capita: 1.7 t","<b>Mongolia<\/b><br>GDP/capita: $13,607<br>CO₂/capita: 14.6 t","<b>Morocco<\/b><br>GDP/capita: $8,495<br>CO₂/capita: 1.9 t","<b>Mozambique<\/b><br>GDP/capita: $999<br>CO₂/capita: 0.2 t","<b>Myanmar<\/b><br>GDP/capita: $6,403<br>CO₂/capita: 0.6 t","<b>Namibia<\/b><br>GDP/capita: $8,412<br>CO₂/capita: 1.4 t","<b>Nepal<\/b><br>GDP/capita: $3,124<br>CO₂/capita: 0.4 t","<b>New Zealand<\/b><br>GDP/capita: $37,534<br>CO₂/capita: 7.4 t","<b>Nicaragua<\/b><br>GDP/capita: $4,493<br>CO₂/capita: 0.8 t","<b>Niger<\/b><br>GDP/capita: $925<br>CO₂/capita: 0.1 t","<b>Nigeria<\/b><br>GDP/capita: $5,153<br>CO₂/capita: 0.6 t","<b>North Korea<\/b><br>GDP/capita: $1,632<br>CO₂/capita: 2.7 t","<b>North Macedonia<\/b><br>GDP/capita: $14,983<br>CO₂/capita: 4 t","<b>Norway<\/b><br>GDP/capita: $85,140<br>CO₂/capita: 8 t","<b>Oman<\/b><br>GDP/capita: $37,178<br>CO₂/capita: 15.7 t","<b>Pakistan<\/b><br>GDP/capita: $5,079<br>CO₂/capita: 0.8 t","<b>Palestine<\/b><br>GDP/capita: $4,924<br>CO₂/capita: 0.7 t","<b>Panama<\/b><br>GDP/capita: $21,175<br>CO₂/capita: 2.9 t","<b>Paraguay<\/b><br>GDP/capita: $9,671<br>CO₂/capita: 1.3 t","<b>Peru<\/b><br>GDP/capita: $10,147<br>CO₂/capita: 1.8 t","<b>Poland<\/b><br>GDP/capita: $29,332<br>CO₂/capita: 8.3 t","<b>Qatar<\/b><br>GDP/capita: $133,605<br>CO₂/capita: 36.3 t","<b>Romania<\/b><br>GDP/capita: $23,412<br>CO₂/capita: 3.9 t","<b>Russia<\/b><br>GDP/capita: $25,285<br>CO₂/capita: 11.6 t","<b>Saint Lucia<\/b><br>GDP/capita: $10,266<br>CO₂/capita: 2.8 t","<b>Sao Tome and Principe<\/b><br>GDP/capita: $3,678<br>CO₂/capita: 0.7 t","<b>Saudi Arabia<\/b><br>GDP/capita: $55,367<br>CO₂/capita: 23.2 t","<b>Senegal<\/b><br>GDP/capita: $2,821<br>CO₂/capita: 0.8 t","<b>Serbia<\/b><br>GDP/capita: $15,390<br>CO₂/capita: 6.4 t","<b>Seychelles<\/b><br>GDP/capita: $26,662<br>CO₂/capita: 5 t","<b>Sierra Leone<\/b><br>GDP/capita: $1,427<br>CO₂/capita: 0.1 t","<b>Singapore<\/b><br>GDP/capita: $75,106<br>CO₂/capita: 8.6 t","<b>Slovakia<\/b><br>GDP/capita: $27,259<br>CO₂/capita: 6.2 t","<b>South Korea<\/b><br>GDP/capita: $38,934<br>CO₂/capita: 12.5 t","<b>Sweden<\/b><br>GDP/capita: $45,434<br>CO₂/capita: 4 t","<b>Syria<\/b><br>GDP/capita: $3,067<br>CO₂/capita: 1.6 t","<b>Taiwan<\/b><br>GDP/capita: $46,714<br>CO₂/capita: 11.6 t","<b>Tajikistan<\/b><br>GDP/capita: $4,300<br>CO₂/capita: 0.9 t","<b>Togo<\/b><br>GDP/capita: $1,486<br>CO₂/capita: 0.3 t","<b>Trinidad and Tobago<\/b><br>GDP/capita: $26,979<br>CO₂/capita: 27.4 t","<b>Turkmenistan<\/b><br>GDP/capita: $13,864<br>CO₂/capita: 9.2 t","<b>Uganda<\/b><br>GDP/capita: $2,161<br>CO₂/capita: 0.1 t","<b>United States<\/b><br>GDP/capita: $54,888<br>CO₂/capita: 15.5 t","<b>Uruguay<\/b><br>GDP/capita: $19,775<br>CO₂/capita: 1.9 t","<b>Uzbekistan<\/b><br>GDP/capita: $10,314<br>CO₂/capita: 3.3 t","<b>Venezuela<\/b><br>GDP/capita: $6,814<br>CO₂/capita: 3.6 t","<b>World<\/b><br>GDP/capita: $15,638<br>CO₂/capita: 4.7 t","<b>Yemen<\/b><br>GDP/capita: $1,885<br>CO₂/capita: 0.3 t","<b>Zambia<\/b><br>GDP/capita: $3,516<br>CO₂/capita: 0.5 t","<b>Zimbabwe<\/b><br>GDP/capita: $1,647<br>CO₂/capita: 0.7 t"],"hoverinfo":["text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text"],"marker":{"color":"rgba(180,180,180,0.4)","size":6,"line":{"color":"rgba(150,150,150,0.3)","width":0.5}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"line":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":[18167.465059611033,49268.909976190131,4349.0466765579395,2212.2999236254946,14703.528045323696,18567.945925763241,1594.4146051065081,3010.6386172403104,45228.309196739458,16601.056061667547,13445.310628256755,24715.173243468213,40232.398011880825,46510.65742186999,4256.3746758167736,49638.177410161108,6908.030151733039,12009.892092191292,59694.762693693898,35185.779935155973,38149.092073380511,3289.9078655985982,25796.098593351919,24791.842619762392,16282.225598283781,20500.295170115962,47630.665226267934,8899.5756702706203,27699.856637170367,1947.6502913016818,30525.610015272832,12110.543948517719,34722.008361188746,12477.46559393093,62802.905902227038,2908.8169313000317,16066.754904738475,11169.778745480875,23326.74517114865,9912.8543662317516,78374.266190935989,39103.674793407059,7529.3269767899728],"y":[4.0119999999999996,16.283000000000001,0.57499999999999996,0.41399999999999998,2.298,6.0490000000000004,0.26800000000000002,0.377,15.324999999999999,7.5259999999999998,1.9830000000000001,5.6929999999999996,4.8120000000000003,8.4809999999999999,0.52500000000000002,5.5970000000000004,1.8799999999999999,2.4409999999999998,7.54,5.6479999999999997,8.6980000000000004,0.35499999999999998,3.988,8.3030000000000008,3.7229999999999999,4.0490000000000004,8.7089999999999996,1.2869999999999999,4.5999999999999996,0.111,6.7450000000000001,7.9000000000000004,5.2850000000000001,0.94199999999999995,4.2930000000000001,0.27400000000000002,3.9409999999999998,2.5750000000000002,4.7629999999999999,4.9420000000000002,21.760000000000002,5.4349999999999996,3.492],"type":"scatter","mode":"markers","name":"Plastic data available","text":["<b>Argentina<\/b><br>GDP/capita: $18,167<br>CO₂/capita: 4 t<br>Plastic pieces: 5,336","<b>Australia<\/b><br>GDP/capita: $49,269<br>CO₂/capita: 16.3 t<br>Plastic pieces: 6","<b>Bangladesh<\/b><br>GDP/capita: $4,349<br>CO₂/capita: 0.6 t<br>Plastic pieces: 32","<b>Benin<\/b><br>GDP/capita: $2,212<br>CO₂/capita: 0.4 t<br>Plastic pieces: 9,976","<b>Brazil<\/b><br>GDP/capita: $14,704<br>CO₂/capita: 2.3 t<br>Plastic pieces: 9,468","<b>Bulgaria<\/b><br>GDP/capita: $18,568<br>CO₂/capita: 6 t<br>Plastic pieces: 16","<b>Burkina Faso<\/b><br>GDP/capita: $1,594<br>CO₂/capita: 0.3 t<br>Plastic pieces: 11,636","<b>Cameroon<\/b><br>GDP/capita: $3,011<br>CO₂/capita: 0.4 t<br>Plastic pieces: 17,190","<b>Canada<\/b><br>GDP/capita: $45,228<br>CO₂/capita: 15.3 t<br>Plastic pieces: 2","<b>China<\/b><br>GDP/capita: $16,601<br>CO₂/capita: 7.5 t<br>Plastic pieces: 6,918","<b>Colombia<\/b><br>GDP/capita: $13,445<br>CO₂/capita: 2 t<br>Plastic pieces: 1,712","<b>Cyprus<\/b><br>GDP/capita: $24,715<br>CO₂/capita: 5.7 t<br>Plastic pieces: 48","<b>France<\/b><br>GDP/capita: $40,232<br>CO₂/capita: 4.8 t<br>Plastic pieces: 30","<b>Germany<\/b><br>GDP/capita: $46,511<br>CO₂/capita: 8.5 t<br>Plastic pieces: 562","<b>Ghana<\/b><br>GDP/capita: $4,256<br>CO₂/capita: 0.5 t<br>Plastic pieces: 1,156","<b>Hong Kong<\/b><br>GDP/capita: $49,638<br>CO₂/capita: 5.6 t<br>Plastic pieces: 7,416","<b>India<\/b><br>GDP/capita: $6,908<br>CO₂/capita: 1.9 t<br>Plastic pieces: 4,132","<b>Indonesia<\/b><br>GDP/capita: $12,010<br>CO₂/capita: 2.4 t<br>Plastic pieces: 26,618","<b>Ireland<\/b><br>GDP/capita: $59,695<br>CO₂/capita: 7.5 t<br>Plastic pieces: 2","<b>Italy<\/b><br>GDP/capita: $35,186<br>CO₂/capita: 5.6 t<br>Plastic pieces: 1,380","<b>Japan<\/b><br>GDP/capita: $38,149<br>CO₂/capita: 8.7 t<br>Plastic pieces: 168","<b>Kenya<\/b><br>GDP/capita: $3,290<br>CO₂/capita: 0.4 t<br>Plastic pieces: 18,988","<b>Latvia<\/b><br>GDP/capita: $25,796<br>CO₂/capita: 4 t<br>Plastic pieces: 5,246","<b>Malaysia<\/b><br>GDP/capita: $24,792<br>CO₂/capita: 8.3 t<br>Plastic pieces: 9,760","<b>Mexico<\/b><br>GDP/capita: $16,282<br>CO₂/capita: 3.7 t<br>Plastic pieces: 1,276","<b>Montenegro<\/b><br>GDP/capita: $20,500<br>CO₂/capita: 4 t<br>Plastic pieces: 9,284","<b>Netherlands<\/b><br>GDP/capita: $47,631<br>CO₂/capita: 8.7 t<br>Plastic pieces: 10,134","<b>Philippines<\/b><br>GDP/capita: $8,900<br>CO₂/capita: 1.3 t<br>Plastic pieces: 74,032","<b>Portugal<\/b><br>GDP/capita: $27,700<br>CO₂/capita: 4.6 t<br>Plastic pieces: 2,008","<b>Rwanda<\/b><br>GDP/capita: $1,948<br>CO₂/capita: 0.1 t<br>Plastic pieces: 826","<b>Slovenia<\/b><br>GDP/capita: $30,526<br>CO₂/capita: 6.7 t<br>Plastic pieces: 1,828","<b>South Africa<\/b><br>GDP/capita: $12,111<br>CO₂/capita: 7.9 t<br>Plastic pieces: 1,810","<b>Spain<\/b><br>GDP/capita: $34,722<br>CO₂/capita: 5.3 t<br>Plastic pieces: 3,982","<b>Sri Lanka<\/b><br>GDP/capita: $12,477<br>CO₂/capita: 0.9 t<br>Plastic pieces: 7,742","<b>Switzerland<\/b><br>GDP/capita: $62,803<br>CO₂/capita: 4.3 t<br>Plastic pieces: 15,002","<b>Tanzania<\/b><br>GDP/capita: $2,909<br>CO₂/capita: 0.3 t<br>Plastic pieces: 2,526","<b>Thailand<\/b><br>GDP/capita: $16,067<br>CO₂/capita: 3.9 t<br>Plastic pieces: 738","<b>Tunisia<\/b><br>GDP/capita: $11,170<br>CO₂/capita: 2.6 t<br>Plastic pieces: 80","<b>Turkey<\/b><br>GDP/capita: $23,327<br>CO₂/capita: 4.8 t<br>Plastic pieces: 356","<b>Ukraine<\/b><br>GDP/capita: $9,913<br>CO₂/capita: 4.9 t<br>Plastic pieces: 9,676","<b>United Arab Emirates<\/b><br>GDP/capita: $78,374<br>CO₂/capita: 21.8 t<br>Plastic pieces: 24","<b>United Kingdom<\/b><br>GDP/capita: $39,104<br>CO₂/capita: 5.4 t<br>Plastic pieces: 6","<b>Vietnam<\/b><br>GDP/capita: $7,529<br>CO₂/capita: 3.5 t<br>Plastic pieces: 21,774"],"hoverinfo":["text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text"],"marker":{"color":"rgba(49, 130, 189, 0.6)","size":[16.484668377684724,10.004862893421587,10.036471700661894,22.125624746724299,21.508037282182897,10.017020126975551,24.143725516682427,30.895853032554371,10,18.407942725921924,12.078886937727948,10.055923274348237,10.034040253951101,10.680805079022019,11.402944752127516,19.013372956909361,15.020937457787383,42.357692827232199,10,11.675266783736323,10.201810076995812,33.081723625557203,16.375253275699041,21.863028501958667,11.548831554775091,21.284344184789951,22.317709036876941,100,12.4387410509253,11.001756044846683,12.219910846953937,12.198027826556801,14.838578954477914,19.409698770768607,28.235850330946914,13.068485749020667,10.894772389571795,10.094826421720924,10.430366067810347,21.760907740105363,10.026745913818722,10.004862893421587,36.468728893691747],"sizemode":"area","sizeref":0.29999999999999999,"opacity":0.59999999999999998,"line":{"color":"rgba(49,130,189,0.8)","width":1}},"textfont":{"size":[16.484668377684724,10.004862893421587,10.036471700661894,22.125624746724299,21.508037282182897,10.017020126975551,24.143725516682427,30.895853032554371,10,18.407942725921924,12.078886937727948,10.055923274348237,10.034040253951101,10.680805079022019,11.402944752127516,19.013372956909361,15.020937457787383,42.357692827232199,10,11.675266783736323,10.201810076995812,33.081723625557203,16.375253275699041,21.863028501958667,11.548831554775091,21.284344184789951,22.317709036876941,100,12.4387410509253,11.001756044846683,12.219910846953937,12.198027826556801,14.838578954477914,19.409698770768607,28.235850330946914,13.068485749020667,10.894772389571795,10.094826421720924,10.430366067810347,21.760907740105363,10.026745913818722,10.004862893421587,36.468728893691747]},"error_y":{"color":"rgba(255,127,14,1)","width":[]},"error_x":{"color":"rgba(255,127,14,1)","width":[]},"line":{"color":"rgba(255,127,14,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":[55021.133857493223],"y":[15.722],"type":"scatter","mode":"markers+text","name":"Luxembourg","text":"<b>Luxembourg<\/b><br>GDP/capita: $55,021<br>CO₂/capita: 15.7 t<br>Plastic pieces: 2","textposition":"top right","hoverinfo":"text","marker":{"color":"rgba(214, 39, 40, 0.85)","size":[10],"sizemode":"area","sizeref":0.29999999999999999,"opacity":0.94999999999999996,"line":{"color":"darkred","width":2}},"textfont":{"size":10},"error_y":{"color":"rgba(44,160,44,1)","width":10},"error_x":{"color":"rgba(44,160,44,1)","width":10},"line":{"color":"rgba(44,160,44,1)","width":10},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div id="3ade8a4a-fb1d-4a6c-8409-ac45482d5fc9" class="hidden html-fill-item html-fill-container">
 
 </div>
 </div>
@@ -1350,236 +1400,243 @@ grid-auto-rows: minmax(0, 1fr);">
 
 
 <script id="quarto-html-after-body" type="application/javascript">
-window.document.addEventListener("DOMContentLoaded", function (event) {
-  const toggleBodyColorMode = (bsSheetEl) => {
-    const mode = bsSheetEl.getAttribute("data-mode");
-    const bodyEl = window.document.querySelector("body");
-    if (mode === "dark") {
-      bodyEl.classList.add("quarto-dark");
-      bodyEl.classList.remove("quarto-light");
-    } else {
-      bodyEl.classList.add("quarto-light");
-      bodyEl.classList.remove("quarto-dark");
-    }
-  }
-  const toggleBodyColorPrimary = () => {
-    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
-    if (bsSheetEl) {
-      toggleBodyColorMode(bsSheetEl);
-    }
-  }
-  toggleBodyColorPrimary();  
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
-  const isCodeAnnotation = (el) => {
-    for (const clz of el.classList) {
-      if (clz.startsWith('code-annotation-')) {                     
-        return true;
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
       }
+      return false;
     }
-    return false;
-  }
-  const onCopySuccess = function(e) {
-    // button target
-    const button = e.trigger;
-    // don't keep focus
-    button.blur();
-    // flash "checked"
-    button.classList.add('code-copy-button-checked');
-    var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
-    let tooltip;
-    if (window.bootstrap) {
-      button.setAttribute("data-bs-toggle", "tooltip");
-      button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
-      tooltip = new bootstrap.Tooltip(button, 
-        { trigger: "manual", 
-          customClass: "code-copy-button-tooltip",
-          offset: [0, -8]});
-      tooltip.show();    
-    }
-    setTimeout(function() {
-      if (tooltip) {
-        tooltip.hide();
-        button.removeAttribute("data-bs-title");
-        button.removeAttribute("data-bs-toggle");
-        button.removeAttribute("data-bs-placement");
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
       }
-      button.setAttribute("title", currentTitle);
-      button.classList.remove('code-copy-button-checked');
-    }, 1000);
-    // clear code selection
-    e.clearSelection();
-  }
-  const getTextToCopy = function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
       for (const childEl of codeEl.children) {
         if (isCodeAnnotation(childEl)) {
           childEl.remove();
         }
       }
       return codeEl.innerText;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-    text: getTextToCopy
-  });
-  clipboard.on('success', onCopySuccess);
-  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-      text: getTextToCopy,
-      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
     });
-    clipboardModal.on('success', onCopySuccess);
-  }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-    var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
     }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-        // undo the damage that might have been done by quarto-nav.js in the case of
-        // links that we want to consider external
-        if (link.dataset.originalHref !== undefined) {
-          link.href = link.dataset.originalHref;
-        }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
-    }
-  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-    const config = {
-      allowHTML: true,
-      maxWidth: 500,
-      delay: 100,
-      arrow: false,
-      appendTo: function(el) {
-          return el.parentElement;
-      },
-      interactive: true,
-      interactiveBorder: 10,
-      theme: 'quarto',
-      placement: 'bottom-start',
-    };
-    if (contentFn) {
-      config.content = contentFn;
-    }
-    if (onTriggerFn) {
-      config.onTrigger = onTriggerFn;
-    }
-    if (onUntriggerFn) {
-      config.onUntrigger = onUntriggerFn;
-    }
-    window.tippy(el, config); 
-  }
-  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-  for (var i=0; i<noterefs.length; i++) {
-    const ref = noterefs[i];
-    tippyHover(ref, function() {
-      // use id or data attribute instead here
-      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-      try { href = new URL(href).hash; } catch {}
-      const id = href.replace(/^#\/?/, "");
-      const note = window.document.getElementById(id);
-      if (note) {
-        return note.innerHTML;
-      } else {
-        return "";
-      }
-    });
-  }
-  const xrefs = window.document.querySelectorAll('a.quarto-xref');
-  const processXRef = (id, note) => {
-    // Strip column container classes
-    const stripColumnClz = (el) => {
-      el.classList.remove("page-full", "page-columns");
-      if (el.children) {
-        for (const child of el.children) {
-          stripColumnClz(child);
-        }
-      }
-    }
-    stripColumnClz(note)
-    if (id === null || id.startsWith('sec-')) {
-      // Special case sections, only their first couple elements
-      const container = document.createElement("div");
-      if (note.children && note.children.length > 2) {
-        container.appendChild(note.children[0].cloneNode(true));
-        for (let i = 1; i < note.children.length; i++) {
-          const child = note.children[i];
-          if (child.tagName === "P" && child.innerText === "") {
-            continue;
-          } else {
-            container.appendChild(child.cloneNode(true));
-            break;
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
           }
         }
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(container);
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
         }
-        return container.innerHTML
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
       } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
         if (window.Quarto?.typesetMath) {
           window.Quarto.typesetMath(note);
         }
-        return note.innerHTML;
-      }
-    } else {
-      // Remove any anchor links if they are present
-      const anchorLink = note.querySelector('a.anchorjs-link');
-      if (anchorLink) {
-        anchorLink.remove();
-      }
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(note);
-      }
-      if (note.classList.contains("callout")) {
-        return note.outerHTML;
-      } else {
-        return note.innerHTML;
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
       }
     }
-  }
-  for (var i=0; i<xrefs.length; i++) {
-    const xref = xrefs[i];
-    tippyHover(xref, undefined, function(instance) {
-      instance.disable();
-      let url = xref.getAttribute('href');
-      let hash = undefined; 
-      if (url.startsWith('#')) {
-        hash = url;
-      } else {
-        try { hash = new URL(url).hash; } catch {}
-      }
-      if (hash) {
-        const id = hash.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note !== null) {
-          try {
-            const html = processXRef(id, note.cloneNode(true));
-            instance.setContent(html);
-          } finally {
-            instance.enable();
-            instance.show();
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
           }
         } else {
-          // See if we can fetch this
-          fetch(url.split('#')[0])
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
           .then(res => res.text())
           .then(html => {
             const parser = new DOMParser();
             const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.getElementById(id);
+            const note = htmlDoc.querySelector('main.content');
             if (note !== null) {
-              const html = processXRef(id, note);
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
               instance.setContent(html);
             } 
           }).finally(() => {
@@ -1587,185 +1644,161 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             instance.show();
           });
         }
-      } else {
-        // See if we can fetch a full url (with no hash to target)
-        // This is a special case and we should probably do some content thinning / targeting
-        fetch(url)
-        .then(res => res.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const htmlDoc = parser.parseFromString(html, "text/html");
-          const note = htmlDoc.querySelector('main.content');
-          if (note !== null) {
-            // This should only happen for chapter cross references
-            // (since there is no id in the URL)
-            // remove the first header
-            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-              note.children[0].remove();
-            }
-            const html = processXRef(null, note);
-            instance.setContent(html);
-          } 
-        }).finally(() => {
-          instance.enable();
-          instance.show();
-        });
-      }
-    }, function(instance) {
-    });
-  }
-      let selectedAnnoteEl;
-      const selectorForAnnotation = ( cell, annotation) => {
-        let cellAttr = 'data-code-cell="' + cell + '"';
-        let lineAttr = 'data-code-annotation="' +  annotation + '"';
-        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-        return selector;
-      }
-      const selectCodeLines = (annoteEl) => {
-        const doc = window.document;
-        const targetCell = annoteEl.getAttribute("data-target-cell");
-        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-        const lineIds = lines.map((line) => {
-          return targetCell + "-" + line;
-        })
-        let top = null;
-        let height = null;
-        let parent = null;
-        if (lineIds.length > 0) {
-            //compute the position of the single el (top and bottom and make a div)
-            const el = window.document.getElementById(lineIds[0]);
-            top = el.offsetTop;
-            height = el.offsetHeight;
-            parent = el.parentElement.parentElement;
-          if (lineIds.length > 1) {
-            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-            height = bottom - top;
-          }
-          if (top !== null && height !== null && parent !== null) {
-            // cook up a div (if necessary) and position it 
-            let div = window.document.getElementById("code-annotation-line-highlight");
-            if (div === null) {
-              div = window.document.createElement("div");
-              div.setAttribute("id", "code-annotation-line-highlight");
-              div.style.position = 'absolute';
-              parent.appendChild(div);
-            }
-            div.style.top = top - 2 + "px";
-            div.style.height = height + 4 + "px";
-            div.style.left = 0;
-            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-            if (gutterDiv === null) {
-              gutterDiv = window.document.createElement("div");
-              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-              gutterDiv.style.position = 'absolute';
-              const codeCell = window.document.getElementById(targetCell);
-              const gutter = codeCell.querySelector('.code-annotation-gutter');
-              gutter.appendChild(gutterDiv);
-            }
-            gutterDiv.style.top = top - 2 + "px";
-            gutterDiv.style.height = height + 4 + "px";
-          }
-          selectedAnnoteEl = annoteEl;
-        }
-      };
-      const unselectCodeLines = () => {
-        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-        elementsIds.forEach((elId) => {
-          const div = window.document.getElementById(elId);
-          if (div) {
-            div.remove();
-          }
-        });
-        selectedAnnoteEl = undefined;
-      };
-        // Handle positioning of the toggle
-    window.addEventListener(
-      "resize",
-      throttle(() => {
-        elRect = undefined;
-        if (selectedAnnoteEl) {
-          selectCodeLines(selectedAnnoteEl);
-        }
-      }, 10)
-    );
-    function throttle(fn, ms) {
-    let throttle = false;
-    let timer;
-      return (...args) => {
-        if(!throttle) { // first call gets through
-            fn.apply(this, args);
-            throttle = true;
-        } else { // all the others get throttled
-            if(timer) clearTimeout(timer); // cancel #2
-            timer = setTimeout(() => {
-              fn.apply(this, args);
-              timer = throttle = false;
-            }, ms);
-        }
-      };
-    }
-      // Attach click handler to the DT
-      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-      for (const annoteDlNode of annoteDls) {
-        annoteDlNode.addEventListener('click', (event) => {
-          const clickedEl = event.target;
-          if (clickedEl !== selectedAnnoteEl) {
-            unselectCodeLines();
-            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-            if (activeEl) {
-              activeEl.classList.remove('code-annotation-active');
-            }
-            selectCodeLines(clickedEl);
-            clickedEl.classList.add('code-annotation-active');
-          } else {
-            // Unselect the line
-            unselectCodeLines();
-            clickedEl.classList.remove('code-annotation-active');
-          }
-        });
-      }
-  const findCites = (el) => {
-    const parentEl = el.parentElement;
-    if (parentEl) {
-      const cites = parentEl.dataset.cites;
-      if (cites) {
-        return {
-          el,
-          cites: cites.split(' ')
-        };
-      } else {
-        return findCites(el.parentElement)
-      }
-    } else {
-      return undefined;
-    }
-  };
-  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-  for (var i=0; i<bibliorefs.length; i++) {
-    const ref = bibliorefs[i];
-    const citeInfo = findCites(ref);
-    if (citeInfo) {
-      tippyHover(citeInfo.el, function() {
-        var popup = window.document.createElement('div');
-        citeInfo.cites.forEach(function(cite) {
-          var citeDiv = window.document.createElement('div');
-          citeDiv.classList.add('hanging-indent');
-          citeDiv.classList.add('csl-entry');
-          var biblioDiv = window.document.getElementById('ref-' + cite);
-          if (biblioDiv) {
-            citeDiv.innerHTML = biblioDiv.innerHTML;
-          }
-          popup.appendChild(citeDiv);
-        });
-        return popup.innerHTML;
+      }, function(instance) {
       });
     }
-  }
-});
-</script>
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
 </div> <!-- /container fluid -->
 
 <script type="application/javascript">

@@ -126,7 +126,7 @@ model_data <- meta_set %>%
 luxembourg_data <- readLines("commuters-to-luxembourg-2019-2018-commuters-lux-2019-0.geojson")
 ```
 
-## Row {height="auto"}
+## Row 
 
 ### 🌍 Population & GDP Data
 
@@ -364,22 +364,19 @@ ggplot(
   theme_ft_rc()
 ```
 
-# Mystery Country??? (Luxemborg would be a good one)
+# Inside look at Luxemborg
 
-##Row
-
-### We need a country that is one of: An outlier, A representative case, or A case of change (need to know we can find country-specific data suitable for a dynamic visualization). We also need to include a short “Why this country?” section (2–3 sentences) on this dashboard page. Also need a dynamic visualization and a leaflet map.
-
-
-### A country we found very interesting in this data was Luxembourg. We found it facinating that the GDP per capita was the largest in our dataset (by a considerable margin) and it was also third in CO2 emmissions per capita. Yet despite this the whole country has a population that hardly exceeds 600,000 people.
+### Why Luxembourg
+A country we found very interesting in this data was Luxembourg. We found it fascinating that the GDP per capita was the largest in our dataset (by a considerable margin) and it was also third in CO2 emissions per capita. Yet despite this the whole country has a population that hardly exceeds 600,000 people.
 
 
+### Luxembourg Map
 ```{r}
 #| label: Leaflet Map
 library(leaflet)
 library(scales)
 
-germany <- model_data |> filter(country.x == "Germany")
+lux <- model_data |> filter(country.x == "Luxembourg")
 
 leaflet() |>
   addProviderTiles(providers$CartoDB.Positron) |>
@@ -399,8 +396,114 @@ leaflet() |>
 
 ```
 
+
+```{r}
+#| label: Aggregate plastic waste and join with CO2/GDP for 2019
+#| include: false
+# Aggregate plastic waste by country/year (sum across parent companies)
+plastic_agg <- plastics |>
+  filter(year == 2019) |>
+  group_by(country, year) |>
+  summarise(plastic_pieces = sum(grand_total, na.rm = TRUE), .groups = "drop")
+
+# Build CO2/GDP data for 2019, all countries
+co2_2019 <- co2 |>
+  filter(year == 2019, !is.na(co2_per_capita), !is.na(gdp), !is.na(population)) |>
+  mutate(gdp_per_capita = gdp / population) |>
+  select(country, year, co2_per_capita, gdp_per_capita, population)
+
+# Join — keep all co2 countries, plastic waste = NA if not in plastics
+plot_data <- co2_2019 |>
+  left_join(plastic_agg |> select(country, plastic_pieces), by = "country") |>
+  mutate(
+    highlight    = country == "Luxembourg",
+    bubble_size  = ifelse(is.na(plastic_pieces), 1, plastic_pieces + 1),
+    has_plastic  = !is.na(plastic_pieces)
+  )
+
+cat("Total countries:", nrow(plot_data), "\n")
+cat("Countries with plastic data:", sum(plot_data$has_plastic), "\n")
+plot_data |> filter(country == "Luxembourg")
+```
+
+### Countries GDP per capita vs CO2 per capita in comparison to Luxembourg
+
 ```{r}
 #| label: Chunk for animated/plotly map
+#FIX 
+# Split into highlighted and background for layering
+lux_row     <- plot_data |> 
+  filter(country == "Luxembourg")
+others_no_p <- plot_data |> 
+  filter(country != "Luxembourg", !has_plastic) 
+others_p    <- plot_data |> 
+  filter(country != "Luxembourg",  has_plastic)
 
+plot_ly() |>
+  # Background: countries without plastic data (small grey dots)
+  add_trace(
+    data      = others_no_p,
+    x         = ~gdp_per_capita,
+    y         = ~co2_per_capita,
+    type      = "scatter",
+    mode      = "markers",
+    name      = "No plastic data",
+    text      = ~paste0("<b>", country, "</b><br>",
+                        "GDP/capita: $", scales::comma(round(gdp_per_capita)), "<br>",
+                        "CO₂/capita: ", round(co2_per_capita, 1), " t"),
+    hoverinfo = "text",
+    marker    = list(size = 6, color = "rgba(180,180,180,0.4)",
+                     line = list(color = "rgba(150,150,150,0.3)", width = 0.5))
+  ) |>
+  # Countries with plastic data (sized by plastic pieces)
+  add_trace(
+    data      = others_p,
+    x         = ~gdp_per_capita,
+    y         = ~co2_per_capita,
+    size      = ~bubble_size,
+    type      = "scatter",
+    mode      = "markers",
+    name      = "Plastic data available",
+    text      = ~paste0("<b>", country, "</b><br>",
+                        "GDP/capita: $", scales::comma(round(gdp_per_capita)), "<br>",
+                        "CO₂/capita: ", round(co2_per_capita, 1), " t<br>",
+                        "Plastic pieces: ", scales::comma(plastic_pieces)),
+    hoverinfo = "text",
+    marker    = list(sizemode = "area", sizeref = 0.3, opacity = 0.6,
+                     color = "rgba(49, 130, 189, 0.6)",
+                     line = list(color = "rgba(49,130,189,0.8)", width = 1))
+  ) |>
+  # Luxembourg highlighted
+  add_trace(
+    data      = lux_row,
+    x         = ~gdp_per_capita,
+    y         = ~co2_per_capita,
+    size      = ~bubble_size,
+    type      = "scatter",
+    mode      = "markers+text",
+    name      = "Luxembourg",
+    text      = ~paste0("<b>", country, "</b><br>",
+                        "GDP/capita: $", scales::comma(round(gdp_per_capita)), "<br>",
+                        "CO₂/capita: ", round(co2_per_capita, 1), " t<br>",
+                        "Plastic pieces: ", plastic_pieces),
+    textposition = "top right",
+    hoverinfo = "text",
+    marker    = list(sizemode = "area", sizeref = 0.3, opacity = 0.95,
+                     color = "rgba(214, 39, 40, 0.85)",
+                     line = list(color = "darkred", width = 2))
+  ) |>
+  layout(
+    title  = list(text = "CO₂ per Capita vs. GDP per Capita (2019) — Bubble Size: Plastic Waste Pieces Collected",
+                  font = list(size = 12)),
+    xaxis  = list(title = "GDP per Capita (USD)", tickformat = "$,"),
+    yaxis  = list(title = "CO₂ per Capita (tonnes)"),
+    legend = list(orientation = "h", y = -0.15),
+    annotations = list(list(
+      x = 0.01, y = -0.2, xref = "paper", yref = "paper",
+      text = "Bubble size reflects plastic pieces collected in cleanup events (2019) — not national plastic production.",
+      showarrow = FALSE, font = list(size = 9, color = "gray50"), xanchor = "left"
+    )),
+    margin = list(b = 90)
+  )
 
 ```
