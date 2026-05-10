@@ -388,7 +388,7 @@ ggplot(
   theme_ft_rc()
 ```
 
-# Inside look at Luxemborg
+# Inside look at Luxembourg
 
 ### Why Luxembourg
 A country we found very interesting in this data was Luxembourg. We found it fascinating that the GDP per capita was the largest in our dataset (by a considerable margin) and it was also third in CO2 emissions per capita. Yet despite this the whole country has a population that hardly exceeds 600,000 people.
