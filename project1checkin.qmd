@@ -1,4 +1,5 @@
 ---
+title: "Break Free From Plastic Analysis"
 format:
   dashboard:
     theme: minty
@@ -11,12 +12,12 @@ format:
         href: mailto:mpsouza@calpoly.edu 
       - icon: linkedin
         href: https://www.linkedin.com/in/mason-souza-19082a293/
+server: shiny 
 ---
-
-# What is the relationship between GDP per capita and CO₂ emissions per capita across countries in 2019? How does population size influence this relationship?
-
 ```{r}
 #| include: false
+#| context: setup
+#| label: load-packages
 
 library(tidyverse)
 library(httr)
@@ -30,6 +31,10 @@ library(viridis)
 library(hexbin)
 library(leaflet)
 library(plotly)
+```
+
+```{r}
+#| context: data
 
 # Load plastic waste data
 plastics <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2021/2021-01-26/plastics.csv')
@@ -58,6 +63,7 @@ get_gdp <- function(iso2) {
 }
 
 gdp_data <- map_dfr(iso2_list, get_gdp)
+Sys.sleep(1)
 
 # Population API function
 get_population <- function(iso2) {
@@ -147,6 +153,8 @@ gapminder_co2 <- co2 |>
   ) |>
   select(country, year, gdp_per_capita, co2_per_capita, population, continent)
 ```
+
+# Analyzing GDP and CO₂ Emissions
 
 ## Row {height="150px"}
 
@@ -311,82 +319,56 @@ ranked_table |>
 #### 🫧 Bubble Plot: GDP vs CO₂ Emissions Per Capita
 
 ```{r}
-#| warning: false
-#| label: fig-rq2-bubble
-#| fig-cap: "GDP per capita and CO2 emissions per capita across countries in 2019, with bubble size representing population."
-#| fig-alt: "Bubble plot of GDP per capita versus CO2 emissions per capita for 51 countries in 2019. Bubble size represents population and color indicates GDP level. Countries with higher GDP per capita tend to also have higher CO2 emissions per capita."
+#| content: card-sidebar
 
-plotly_bubble <- model_data %>%
-  arrange(desc(population)) %>%
-  mutate(
-    country.x = as.factor(country.x),
-    gdp_level = case_when(
-      is.na(gdp_billions) ~ "Other",
-      gdp_billions < 100 ~ "Low",
-      gdp_billions < 500 ~ "Lower-Mid",
-      gdp_billions < 1000 ~ "Upper-Mid",
-      gdp_billions >= 1000 ~ "High"
-    ),
-    gdp_level = factor(
-      gdp_level,
-      levels = c("Low", "Lower-Mid", "Upper-Mid", "High", "Other")
-    ),
-     hover_text = paste0(
-      country.x,
-      "<br>GDP per capita: $", format(round(gdp_per_capita, 0), big.mark = ","),
-      "<br>CO₂ per capita: ", round(co2_per_capita, 2),
-      "<br>Population: ", format(population, big.mark = ",")
-     )
-  ) %>%
-  ggplot(aes(
-    x = gdp_per_capita,
-    y = co2_per_capita,
-    size = population,
-    color = gdp_level,
-    text = hover_text
-  )) +
-  geom_point(alpha = 0.65) +
-  scale_size(range = c(2, 14), name = "Population") +
-  scale_color_viridis_d(option = "A", end = 0.9, name = "GDP Level") +
-  scale_x_log10(labels = scales::label_dollar()) +
-  scale_y_log10(labels = scales::label_number()) +
-  theme_ft_rc() +
-  labs(
-    x = "GDP Per Capita",
-    y = "CO2 Emissions Per Capita",
-    title = "Bubble Plot of GDP and CO2 Emissions Per Capita",
-    subtitle = "2019 countries with population size"
-  )
+selectInput("x_variables", "Select X Variable",
+            c("gdp_per_capita", "co2_per_capita", "plastic_waste_per_capita"))
 
-ggplotly(plotly_bubble, tooltip = "text")
+selectInput("y_variables", "Select Y Variable",
+            c("gdp_per_capita", "co2_per_capita", "plastic_waste_per_capita"))
+
+radioButtons("radio_trans", "Select Transformation",
+             choices = list("None" = 1,
+                            "Squared" = 2,
+                            "log" = 3,
+                            "Reciprocal" = 4),
+             selected = 1)
 ```
-
-#### 📊 GDP vs Plastic Waste Per Capita (2019 & 2020)
 
 ```{r}
+#| label: Reactive Bubbleplot
+#| message: false
 #| warning: false
-#| label: fig-rq1-facet
-#| fig-cap: "Relationship between GDP per capita and CO2 waste per capita across countries in 2019 and 2020, with separate panels for each year."
-#| fig-alt: "Faceted scatterplot showing GDP per capita versus CO2 waste per capita for countries in 2019 and 2020. Each panel includes a fitted trend line. The relationship appears positive in both years, allowing comparison of how the pattern changes between 2019 and 2020."
 
-ggplot(
-  meta_set %>%
-    filter(year %in% c(2019, 2020), parent_company == "Grand Total"),
-  aes(x = gdp_per_capita, y = co2_per_capita)
-) +
-  geom_point(color = "#2C7FB8", alpha = 0.7, size = 2.5) +
-  geom_smooth(method = "loess", se = FALSE, color = "#D95F0E", linewidth = 1) +
-  scale_x_log10(labels = scales::label_dollar()) +
-  scale_y_log10(labels = scales::label_number()) +
-  facet_wrap(~year) +
-  labs(
-    title = "GDP per Capita vs CO2 Waste per Capita",
-    subtitle = "Comparison of country-level relationships in 2019 and 2020",
-    x = "GDP per Capita",
-    y = "CO2 Waste per Capita"
-  ) +
-  theme_ft_rc()
+plotlyOutput("reac_bubble")
 ```
+
+<!-- #### 📊 GDP vs Plastic Waste Per Capita (2019 & 2020) -->
+
+<!-- ```{r} -->
+<!-- #| warning: false -->
+<!-- #| label: fig-rq1-facet -->
+<!-- #| fig-cap: "Relationship between GDP per capita and CO2 waste per capita across countries in 2019 and 2020, with separate panels for each year." -->
+<!-- #| fig-alt: "Faceted scatterplot showing GDP per capita versus CO2 waste per capita for countries in 2019 and 2020. Each panel includes a fitted trend line. The relationship appears positive in both years, allowing comparison of how the pattern changes between 2019 and 2020." -->
+
+<!-- ggplot( -->
+<!--   meta_set %>% -->
+<!--     filter(year %in% c(2019, 2020), parent_company == "Grand Total"), -->
+<!--   aes(x = gdp_per_capita, y = co2_per_capita) -->
+<!-- ) + -->
+<!--   geom_point(color = "#2C7FB8", alpha = 0.7, size = 2.5) + -->
+<!--   geom_smooth(method = "loess", se = FALSE, color = "#D95F0E", linewidth = 1) + -->
+<!--   scale_x_log10(labels = scales::label_dollar()) + -->
+<!--   scale_y_log10(labels = scales::label_number()) + -->
+<!--   facet_wrap(~year) + -->
+<!--   labs( -->
+<!--     title = "GDP per Capita vs CO2 Waste per Capita", -->
+<!--     subtitle = "Comparison of country-level relationships in 2019 and 2020", -->
+<!--     x = "GDP per Capita", -->
+<!--     y = "CO2 Waste per Capita" -->
+<!--   ) + -->
+<!--   theme_ft_rc() -->
+<!-- ``` -->
 
 # Inside look at Luxembourg
 
@@ -505,3 +487,84 @@ plot_ly() |>
   animation_opts(frame = 700, easing = "linear", redraw = FALSE) |>
   animation_slider(currentvalue = list(prefix = "Year: "))
 ```
+
+```{r}
+#| context: server
+#| message: false
+#| warning: false 
+
+output$reac_bubble <- renderPlotly({
+  x_var <- input$x_variables
+  y_var <- input$y_variables
+  
+  plot_data <- model_data %>%
+  arrange(desc(population)) %>%
+  mutate(
+    country.x = as.factor(country.x),
+    gdp_level = case_when(
+      is.na(gdp_billions) ~ "Other",
+      gdp_billions < 100 ~ "Low",
+      gdp_billions < 500 ~ "Lower-Mid",
+      gdp_billions < 1000 ~ "Upper-Mid",
+      gdp_billions >= 1000 ~ "High"
+    ),
+    gdp_level = factor(
+      gdp_level,
+      levels = c("Low", "Lower-Mid", "Upper-Mid", "High", "Other")
+    ),
+     hover_text = paste0(
+      country.x,
+      "<br>", x_var, ": ", round(.data[[x_var]], 2),
+      "<br>", y_var, ": ", round(.data[[y_var]], 2),
+      "<br>Population: ", format(population, big.mark = ",")
+     )
+  ) 
+  
+  if (input$radio_trans == 2) {
+    plot_data <- plot_data %>% 
+      mutate(
+        x_plot = .data[[x_var]]^2,
+        y_plot = .data[[y_var]]^2
+      )
+  } else if (input$radio_trans == 3) {
+    plot_data <- plot_data %>% 
+      mutate(
+        x_plot = log(.data[[x_var]]),
+        y_plot = log(.data[[y_var]])
+      )
+  } else if (input$radio_trans == 4) {
+    plot_data <- plot_data %>% 
+      mutate(
+        x_plot = 1 / .data[[x_var]],
+        y_plot = 1 / .data[[y_var]]
+      )
+  } else {
+    plot_data <- plot_data %>% 
+      mutate(
+        x_plot = .data[[x_var]],
+        y_plot = .data[[y_var]]
+      )
+  }
+  
+  bubble_plot <- ggplot(plot_data, aes(
+    x = x_plot,
+    y = y_plot,
+    size = population,
+    color = gdp_level,
+    text = hover_text
+  )) +
+    geom_point(alpha = 0.65) +
+    scale_size(range = c(2, 14), name = "Population") +
+    scale_color_viridis_d(option = "A", end = 0.9, name = "GDP Level") +
+    theme_ft_rc() +
+    labs(
+      x = x_var,
+      y = y_var,
+      title = "Reactive Bubble Plot",
+      subtitle = "2019 countries with population size"
+    )
+
+  ggplotly(bubble_plot, tooltip = "text")
+})
+```
+
