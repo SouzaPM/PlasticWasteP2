@@ -336,7 +336,7 @@ radioButtons("radio_trans", "Select Transformation",
 ```
 
 ```{r}
-#| label: Reactive Bubbleplot
+#| label: Interactive GDP & Environmental Indicators Bubble Plot
 #| message: false
 #| warning: false
 
@@ -556,12 +556,15 @@ output$reac_bubble <- renderPlotly({
     geom_point(alpha = 0.65) +
     scale_size(range = c(2, 14), name = "Population") +
     scale_color_viridis_d(option = "A", end = 0.9, name = "GDP Level") +
-    theme_ft_rc() +
+    theme_ipsum_rc() +
     labs(
       x = x_var,
       y = y_var,
-      title = "Reactive Bubble Plot",
+      title = "Interactive GDP & Environmental Indicators Bubble Plot",
       subtitle = "2019 countries with population size"
+    ) +
+    theme(
+      plot.title = element_text(size = 14)
     )
 
   ggplotly(bubble_plot, tooltip = "text")
