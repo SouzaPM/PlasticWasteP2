@@ -316,21 +316,26 @@ ranked_table |>
 
 ### 📊 Visualizations {.tabset}
 
-#### 🫧 Bubble Plot: GDP vs CO₂ Emissions Per Capita
+#### 🫧 Interactive Bubble Plot
 
 ```{r}
 #| content: card-sidebar
 
-selectInput("x_variables", "Select X Variable",
-            c("gdp_per_capita", "co2_per_capita", "plastic_waste_per_capita"))
+selectInput("x_variables", "Select X Variable", choices = c(
+    "GDP per Capita" = "gdp_per_capita",
+    "CO2 per Capita" = "co2_per_capita",
+    "Plastic Waste per Capita" = "plastic_waste_per_capita"))
 
 selectInput("y_variables", "Select Y Variable",
-            c("gdp_per_capita", "co2_per_capita", "plastic_waste_per_capita"))
+            choices = c(
+    "GDP per Capita" = "gdp_per_capita",
+    "CO2 per Capita" = "co2_per_capita",
+    "Plastic Waste per Capita" = "plastic_waste_per_capita"))
 
 radioButtons("radio_trans", "Select Transformation",
              choices = list("None" = 1,
                             "Squared" = 2,
-                            "log" = 3,
+                            "Log" = 3,
                             "Reciprocal" = 4),
              selected = 1)
 ```
@@ -546,6 +551,12 @@ output$reac_bubble <- renderPlotly({
       )
   }
   
+  nice_labels <- c(
+    gdp_per_capita = "GDP per Capita",
+    co2_per_capita = "CO2 per Capita",
+    plastic_waste_per_capita = "Plastic Waste per Capita"
+  )
+  
   bubble_plot <- ggplot(plot_data, aes(
     x = x_plot,
     y = y_plot,
@@ -558,8 +569,8 @@ output$reac_bubble <- renderPlotly({
     scale_color_viridis_d(option = "A", end = 0.9, name = "GDP Level") +
     theme_ipsum_rc() +
     labs(
-      x = x_var,
-      y = y_var,
+      x = nice_labels[x_var],
+      y = nice_labels[y_var],
       title = "Interactive GDP & Environmental Indicators Bubble Plot",
       subtitle = "2019 countries with population size"
     ) +
